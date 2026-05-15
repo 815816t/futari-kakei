@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ふたり家計 サポート</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --text: #2b2b2b;
+    --muted: #6b6b6b;
+    --accent: #c4937a;
+    --border: #e4dfd6;
+    --code-bg: #f2efe8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  h1 {
+    font-size: 1.75em;
+    margin: 0 0 0.5em;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.4em;
+  }
+  h2 {
+    font-size: 1.25em;
+    margin: 2em 0 0.6em;
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05em;
+    margin: 1.5em 0 0.4em;
+    color: var(--text);
+  }
+  p { margin: 0.6em 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 147, 122, 0.4);
+  }
+  a:hover { border-bottom-color: var(--accent); }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+    font-family: "SF Mono", "Menlo", monospace;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92em;
+    margin-bottom: 2em;
+  }
+  .faq-q {
+    font-weight: 600;
+    margin-top: 1.3em;
+    margin-bottom: 0.3em;
+  }
+  .faq-a {
+    margin-top: 0;
+    color: #444;
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 2.5em 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.88em;
+    text-align: center;
+    margin-top: 3em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>ふたり家計 サポート</h1>
+  <p class="meta">最終更新日: 2026年5月15日</p>
+
+  <p>このページは iOS アプリ「<strong>ふたり家計</strong>」のサポート情報をまとめたページです。お問い合わせ、よくある質問、関連書類へのリンクを掲載しています。</p>
+
+  <hr>
+
+  <h2>お問い合わせ</h2>
+
+  <p>アプリの利用方法、不具合報告、ご要望、その他お問い合わせは、以下のメールアドレスまでお送りください。</p>
+
+  <ul>
+    <li><strong>お問い合わせ全般</strong>: <a href="mailto:taira815816@gmail.com"><code>taira815816@gmail.com</code></a></li>
+    <li><strong>不具合のご報告</strong>: <a href="mailto:yorimitiworks@gmail.com"><code>yorimitiworks@gmail.com</code></a></li>
+  </ul>
+
+  <p>個人で開発・運営しているため、即時の返信は難しい場合があります。目安として 7 営業日程度を心がけて回答するよう努めますが、繁忙期等で遅延する場合があります。あらかじめご了承ください。</p>
+
+  <p>アプリ内の「設定」→「不具合を報告」からも、端末情報を添えて報告フォームを送信できます。</p>
+
+  <hr>
+
+  <h2>よくある質問</h2>
+
+  <p class="faq-q">Q. データはどこに保存されますか?</p>
+  <p class="faq-a">A. 初期状態(ゲストモード)では、お使いの端末内にのみ保存されます。設定からアカウントを作成すると、Google が提供する Firebase(東京リージョン)のクラウドストレージに保存され、複数の端末で同じ家計簿を見ることができるようになります。</p>
+
+  <p class="faq-q">Q. 相手と家計簿を共有するには?</p>
+  <p class="faq-a">A. お二人とも、まず「設定」→「クラウドで同期」からアカウントを作成してください。次に、片方が「設定」→「パートナーを呼ぶ」から招待コードを発行し、もう片方が同じメニューからそのコードを入力します。これによりペアリングが成立し、家計データがリアルタイムで共有されます。</p>
+
+  <p class="faq-q">Q. 端末を機種変更したら、データはどうなりますか?</p>
+  <p class="faq-a">A. アカウントを作成済みであれば、新しい端末でアプリをインストールし、同じメールアドレスとパスワードでログインすることで、これまでの家計簿データをそのまま引き継げます。ゲストモードでご利用の場合は、端末内のデータは引き継がれませんのでご注意ください。</p>
+
+  <p class="faq-q">Q. アカウントを削除したい</p>
+  <p class="faq-a">A. アプリ内の「設定」→「アカウント」→「アカウントを削除」から、いつでもご自身でアカウントとすべての関連データを削除できます。削除されたデータは復旧できません。</p>
+
+  <p class="faq-q">Q. 応援(投げ銭)について教えてください</p>
+  <p class="faq-a">A. 本アプリの家計簿としてのすべての機能は無料です。気に入っていただけた場合のみ、応援としてアプリ内課金(消費型 IAP)で開発者に少額の支援をいただくことができます。応援は購入時に一度だけ発生し、サブスクリプションのような自動更新はありません。応援の有無で使える機能が変わることはありません。</p>
+
+  <p class="faq-q">Q. アプリが起動しない、または動作がおかしい</p>
+  <p class="faq-a">A. お手数ですが、まず以下をお試しください。<br>
+    1. アプリを完全に終了し、もう一度起動する<br>
+    2. 端末を再起動する<br>
+    3. App Store で最新版のアプリが提供されていないか確認し、アップデートする<br>
+  それでも改善しない場合は、上記の「不具合のご報告」のメールアドレスまでご連絡ください。お使いの端末・iOS のバージョン、発生時の状況をお知らせいただけると、原因の特定が早まります。</p>
+
+  <p class="faq-q">Q. 支払いに関するトラブル</p>
+  <p class="faq-a">A. アプリ内課金の決済はすべて Apple が処理しており、当方では決済情報を取得していません。返金や購入履歴に関するご質問は、Apple のサポート(<a href="https://support.apple.com/ja-jp" target="_blank" rel="noopener">https://support.apple.com/ja-jp</a>)にお問い合わせください。</p>
+
+  <hr>
+
+  <h2>関連書類</h2>
+
+  <ul>
+    <li><a href="privacy-ja.html">プライバシーポリシー</a></li>
+  </ul>
+
+  <hr>
+
+  <h2>事業者情報</h2>
+
+  <ul>
+    <li><strong>事業者名</strong>: Taira Sonoda</li>
+    <li><strong>連絡先メールアドレス</strong>: <a href="mailto:taira815816@gmail.com"><code>taira815816@gmail.com</code></a></li>
+    <li><strong>所在地・電話番号</strong>: 個人情報保護の観点から非公開としています。ご請求があった場合、遅滞なく開示いたします。上記メールアドレスまでご連絡ください。</li>
+  </ul>
+
+  <footer>
+    &copy; 2026 Taira Sonoda
+  </footer>
+
+</div>
+</body>
+</html>
