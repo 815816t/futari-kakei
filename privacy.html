@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ふたり家計 / Our Tab — Privacy Policy</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Apple SD Gothic Neo", "PingFang TC", "Microsoft JhengHei", "Thonburi", "Tahoma", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px; line-height: 1.8; color: #2a2620; background: #faf5ee; }
+  h1 { font-size: 24px; border-bottom: 2px solid #c4937a; padding-bottom: 12px; margin-top: 24px; color: #3a2f24; }
+  h2 { font-size: 18px; margin-top: 36px; color: #3a2f24; }
+  h3 { font-size: 15px; margin-top: 24px; color: #4a3f34; }
+  p { margin: 12px 0; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #d4c5af; padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: #f0e6d2; font-weight: 600; }
+  code { background: #f0e6d2; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; font-family: "SF Mono", Menlo, Consolas, monospace; }
+  a { color: #b8722d; text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #d4c5af; margin: 32px 0; }
+  strong { color: #2a2620; }
+  .meta { color: #6a5f50; font-size: 14px; }
+
+  /* Language switcher */
+  .lang-switcher {
+    position: sticky;
+    top: 0;
+    background: #faf5ee;
+    margin: -24px -24px 0 -24px;
+    padding: 12px 24px;
+    border-bottom: 1px solid #efe7dc;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .lang-btn {
+    background: #fff;
+    border: 1px solid #c4937a;
+    color: #c4937a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .lang-btn:hover { background: #f5ede2; }
+  .lang-btn.active { background: #c4937a; color: #fff; }
+
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="lang-btn" data-lang="ja">日本語</button>
+  <button class="lang-btn" data-lang="en">English</button>
+  <button class="lang-btn" data-lang="ko">한국어</button>
+  <button class="lang-btn" data-lang="zh-TW">繁體中文</button>
+  <button class="lang-btn" data-lang="th">ไทย</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- 日本語 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="ja">
+
+<h1>ふたり家計 プライバシーポリシー</h1>
+
+<p class="meta"><strong>制定日:</strong> 2026年5月14日<br>
+<strong>最終更新日:</strong> 2026年5月15日<br>
+<strong>版:</strong> v3.3</p>
+
+<hr>
+
+<p>Taira Sonoda(以下「当方」)は、iOS アプリ「ふたり家計」(以下「本アプリ」)におけるユーザーの個人情報・利用データを、以下のとおり取り扱います。本ポリシーは本アプリの利用規約と一体のものとして適用され、両者が矛盾する場合は本ポリシーの記載が優先します。</p>
+
+<p>本アプリは日本国の居住者を主たる対象としており、その他の国・地域からの利用については、当該国・地域の関連する法令(GDPR 等)に整合する範囲で本ポリシーを適用します。</p>
+
+<h2>第1条 取り扱う情報</h2>
+
+<h3>1.1 ユーザーが直接入力する情報</h3>
+<ul>
+<li>表示名(自分・パートナーの呼び方)</li>
+<li>家計データ(支出金額、カテゴリ、メモ、日付、支払者、負担率、固定費、クイック入力、設定、ノート、カレンダースタンプ等)</li>
+</ul>
+
+<h3>1.2 認証に伴って取得する情報</h3>
+<p>クラウド同期(任意)を利用する場合のみ、以下を取り扱います。</p>
+<ul>
+<li>メールアドレスおよびパスワード(Firebase Authentication 経由のメール/パスワード認証)</li>
+<li>ユーザー識別子(UID)</li>
+<li>同意済みバージョン(利用規約・本ポリシー・特定商取引法表記の各バージョン番号、同意日時、18歳以上同意の事実)</li>
+</ul>
+<p>パスワードは Firebase Authentication により暗号化された形でのみ保管され、当方はパスワードの平文を取得・閲覧することはできません。</p>
+
+<h3>1.3 ペアリング機能で取り扱う情報</h3>
+<p>クラウド同期を有効にしたうえで、ユーザーがペアリング機能を利用する場合に限り、以下を取り扱います。</p>
+<ul>
+<li>ペアリング招待コード(有効期限付きで生成、双方の合意による受諾後に消費)</li>
+<li>ペアリング相手の UID(共有データの読み書き権限の管理のため)</li>
+<li>共有家計データ(ペアリング中、相手の端末にも同じ家計データが同期されます)</li>
+</ul>
+<p>ペアリングはユーザーの明示的な操作(招待コードの発行・入力)によって成立し、いつでも片方の操作のみで解除できます。ペアリング解除後のデータの取り扱いについては、利用規約第6条第5項を参照してください。</p>
+
+<h3>1.4 自動的に取得する情報</h3>
+<ul>
+<li>不具合報告フォームを利用した場合に限り、ユーザーが同意したうえで送信されるデバイス情報(OS バージョン、アプリバージョン、言語設定、通貨設定。いずれも端末を一意に識別する情報ではなく、不具合の再現に必要な技術情報に限ります)</li>
+<li>課金処理時に Apple から提供されるレシート情報(購入トランザクション ID、購入日時、商品 ID)</li>
+</ul>
+
+<h3>1.5 取り扱わない情報</h3>
+<p>本アプリは以下の情報を<strong>収集も保存もしません</strong>。</p>
+<ul>
+<li>氏名、住所、電話番号、生年月日</li>
+<li>クレジットカード番号、銀行口座等の決済情報(課金は Apple のみが処理し、当方はレシート情報以外を取得しません)</li>
+<li>位置情報、連絡先、写真、カメラ、マイク、健康データ</li>
+<li>広告 ID、トラッキング ID、端末固有識別子(IDFA / IDFV / 広告識別子等)</li>
+<li>アクセス解析・行動分析のためのデータ</li>
+</ul>
+
+<h2>第2条 利用目的</h2>
+<p>第1条で取り扱う情報は、以下の目的にのみ利用します。</p>
+<ol>
+<li>本アプリの機能提供(家計データの記録・表示・集計・書き出し)</li>
+<li>クラウド同期機能の提供</li>
+<li>ペアリング機能によるパートナー間でのデータ共有</li>
+<li>同意取得状況の管理(規約改訂時の再同意取得等)</li>
+<li>不具合報告の受領および対応</li>
+<li>法令上の義務の履行および権利の保全</li>
+<li>不正利用、規約違反、サービス妨害行為への対応</li>
+</ol>
+
+<h2>第3条 第三者提供および業務委託</h2>
+
+<p>当方は、法令に基づく開示要請がある場合を除き、ユーザーの個人情報を第三者に提供しません。</p>
+
+<p>ただし、以下の業務委託先がサービス運営上必要な範囲でデータを処理することがあります。これは個人情報保護法第27条第5項第1号に基づく業務委託であり、本人の同意を要する「第三者提供」には該当しません。</p>
+
+<h3>3.1 業務委託先</h3>
+<table>
+<tr><th>委託先</th><th>用途</th><th>取り扱うデータ</th></tr>
+<tr><td>Google LLC(Firebase)</td><td>認証、クラウド同期、Cloud Functions、App Check(不正クライアント検知)</td><td>メールアドレス、UID、家計データ、設定、同意取得記録</td></tr>
+<tr><td>Apple Inc.</td><td>App Store 配信、StoreKit 課金処理、レシート検証</td><td>購入トランザクション情報</td></tr>
+</table>
+<p>各委託先のプライバシー慣行については、それぞれのプライバシーポリシーをご参照ください。</p>
+<ul>
+<li>Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<h3>3.2 国外移転について</h3>
+<p>本アプリのクラウドデータは、Firebase の <strong>asia-northeast1(東京リージョン)</strong> に主として配置されますが、運営上の必要に応じて Google LLC によりアメリカ合衆国を含む国外のサーバーにバックアップ・複製されることがあります。Apple のサービスを利用する範囲においても国外移転が発生します。</p>
+<p>Google LLC および Apple Inc. は、それぞれ国際的なデータ保護枠組み(EU の SCC = 標準契約条項、米国 CCPA、APEC CBPR 等)に基づき、適切な保護措置を講じています。</p>
+
+<h2>第4条 データの保存場所と保存期間</h2>
+
+<h3>4.1 ローカル保存(端末上)</h3>
+<p>家計データの主たる保存先は、本アプリをインストールしたユーザー自身の端末内のローカルストレージ(<code>localStorage</code>)です。クラウド同期を有効にしない限り、当方のサーバーへは送信されません。</p>
+
+<h3>4.2 クラウド保存(任意)</h3>
+<p>ユーザーが自らクラウド同期を有効にした場合に限り、家計データが Firebase(Google LLC)のサーバーに保存されます。クラウド同期は任意機能であり、無効のままでも本アプリのすべての基本機能を利用できます。</p>
+
+<h3>4.3 保存期間</h3>
+<ul>
+<li>ローカルデータ:ユーザーが「すべてのデータを削除」を実行する、または本アプリをアンインストールするまで</li>
+<li>クラウドデータ:ユーザーがアカウント削除を実行するまで(削除後は速やかに消去、ただしバックアップからの完全消去には最大 30 日要する場合があります)</li>
+<li>同意取得記録および課金履歴:法令上の保管義務に従い、アカウント削除後も最大 7 年間保持する場合があります(個人を特定しない形に加工して保持する場合を含む)</li>
+</ul>
+
+<h2>第5条 ユーザーの権利</h2>
+<p>ユーザーは、当方が保有する自身の個人情報について、以下の権利を有します。</p>
+<ol>
+<li><strong>開示請求</strong>:当方が保有する自身の個人情報の開示を求めること</li>
+<li><strong>訂正・削除請求</strong>:誤った情報の訂正、不要な情報の削除を求めること</li>
+<li><strong>利用停止請求</strong>:利用目的の達成に必要な範囲を超えた利用の停止を求めること</li>
+<li><strong>アカウント削除</strong>:アプリ内の設定画面からいつでも自身のアカウントとデータを削除できます</li>
+</ol>
+<p>これらの請求は、第10条の連絡先までお寄せください。</p>
+
+<h2>第6条 セキュリティ対策</h2>
+<p>当方は、ユーザーの個人情報の漏洩、滅失または毀損の防止その他の安全管理のために、必要かつ適切な措置を講じます。</p>
+<ul>
+<li>Firebase Authentication によるパスワードの暗号化保管</li>
+<li>Firestore Security Rules によるデータアクセス制御(ユーザーは自身のデータのみアクセス可能)</li>
+<li>App Check による不正クライアントの検知</li>
+<li>TLS による通信の暗号化</li>
+</ul>
+<p>ただし、インターネットを介するサービスの性質上、いかなる安全管理措置も完全なものとは保証できません。ユーザーは自己の責任において、自身のパスワード等の認証情報を適切に管理するものとします。</p>
+
+<h2>第7条 第三者サービス</h2>
+<p>本アプリは、機能提供のため以下の第三者サービスを利用します。各サービスのプライバシーポリシーが適用される範囲については、第3条を参照してください。</p>
+<ul>
+<li><strong>Firebase</strong>(Google LLC):認証、クラウド同期、Cloud Functions、App Check</li>
+<li><strong>StoreKit</strong>(Apple Inc.):アプリ内課金の処理</li>
+</ul>
+
+<h2>第8条 未成年者の利用</h2>
+<p>本アプリは 17 歳以上を対象としており、13 歳未満からの情報収集は行いません(米国 COPPA 対応)。13 歳未満のユーザーが情報を送信したことが判明した場合、当方は速やかに該当情報を削除します。</p>
+<p>未成年者(18 歳未満)が本アプリを利用する場合は、保護者(法定代理人)の同意のうえで利用するものとします。本アプリは初回起動時に 18 歳以上または法定代理人の同意を確認します。</p>
+
+<h2>第9条 本ポリシーの改訂</h2>
+<p>当方は、法令の改正、サービス内容の変更等に応じて、本ポリシーを改訂することがあります。改訂を行う場合は、本アプリ内の通知、設定画面での再同意プロンプト、または GitHub Pages での告知により、ユーザーに通知します。</p>
+<p>重要な変更を行う場合は、ユーザーから再度の同意を取得するものとします。</p>
+
+<h2>第10条 お問い合わせ窓口</h2>
+<p>本ポリシーに関するお問い合わせ、開示請求、苦情等は以下までお送りください。</p>
+<ul>
+<li><strong>連絡先メールアドレス:</strong> <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></li>
+<li><strong>不具合のご報告:</strong> <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></li>
+</ul>
+<p>個人で運営しているため、即時の対応が難しい場合がありますが、目安として 7 営業日程度を心がけて回答するよう努めます。</p>
+
+<h2>第11条 準拠法および管轄</h2>
+<p>本ポリシーは日本法に準拠し、本ポリシーに関する一切の紛争は、利用規約第14条の規定に従います。</p>
+
+<h2>第12条 認定個人情報保護団体</h2>
+<p>当方は現時点で認定個人情報保護団体に所属していません。個人情報保護委員会への苦情申立等のご案内は以下のとおりです。</p>
+<ul>
+<li>個人情報保護委員会:<a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">https://www.ppc.go.jp/</a></li>
+</ul>
+
+<h2>第13条 国外居住者への適用に関する補足</h2>
+
+<h3>13.1 EU 居住者(GDPR)</h3>
+<p>EU 居住者については、GDPR 第6条第1項(a)号に基づき同意を、(b)号に基づき契約履行を、(c)号に基づき法的義務遵守を、それぞれ取扱根拠とします。データ主体の権利(アクセス権・訂正権・消去権・処理制限権・データポータビリティ権・異議申立権)については第5条に準じて対応します。</p>
+
+<h3>13.2 米国居住者(CCPA / カリフォルニア州)</h3>
+<p>カリフォルニア州居住者については、CCPA に基づき、収集した情報のカテゴリの開示・削除請求・販売拒否権を認めます。当方は個人情報を「販売」していません。</p>
+
+<h3>13.3 韓国居住者(PIPA)</h3>
+<p>韓国居住者については、個人情報保護法(PIPA)に基づき、本ポリシーの韓国語版を第10条連絡先まで請求できます。データ主体の権利は第5条に準じます。</p>
+
+<h3>13.4 台湾居住者(個人資料保護法)</h3>
+<p>台湾居住者については、個人資料保護法に基づき、本ポリシーの繁体字中国語版を第10条連絡先まで請求できます。データ主体の権利は第5条に準じます。</p>
+
+<h3>13.5 タイ居住者(PDPA)</h3>
+<p>タイ居住者については、PDPA に基づき同意ベースで個人情報を取り扱います。本ポリシーのタイ語版を第10条連絡先まで請求できます。データ主体の権利は第5条に準じます。</p>
+
+<hr>
+
+<h2>改訂履歴</h2>
+<ul>
+<li><strong>v3.3(2026年5月15日)</strong>:第1条1.3項 ペアリング機能を「将来の機能」記述から現行機能としての記述に書き換え。第2条 利用目的に「ペアリング機能によるパートナー間でのデータ共有」を追加。</li>
+<li><strong>v3.2(2026年5月14日)</strong>:初回 App Store リリース版として整備</li>
+<li><strong>v3.1(2026年5月)</strong>:同意取得日時の取得を明文化</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px;"><strong>以上</strong></p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- English -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="en">
+
+<h1>Our Tab — Privacy Policy</h1>
+
+<p class="meta"><strong>Effective Date:</strong> May 14, 2026<br>
+<strong>Last Updated:</strong> May 15, 2026<br>
+<strong>Version:</strong> v3.3</p>
+
+<hr>
+
+<p>Taira Sonoda ("we", "us") handles users' personal information and usage data within the iOS application "Our Tab" (the "App") as set forth in this policy. This policy is applied as an integrated part of the Terms of Service; if there is any conflict, this Privacy Policy prevails.</p>
+
+<p>The App is primarily targeted at residents of Japan. For use from other countries or regions, this policy applies to the extent consistent with the applicable laws and regulations of that jurisdiction (e.g., GDPR).</p>
+
+<h2>Article 1. Information We Handle</h2>
+
+<h3>1.1 Information Directly Entered by the User</h3>
+<ul>
+<li>Display names (how you and your partner refer to yourselves)</li>
+<li>Household data (expense amounts, categories, memos, dates, payer, share ratio, recurring expenses, quick inputs, settings, notes, calendar stamps, etc.)</li>
+</ul>
+
+<h3>1.2 Information Obtained Through Authentication</h3>
+<p>Only if you opt into cloud sync, the following is handled:</p>
+<ul>
+<li>Email address and password (via Firebase Authentication email/password sign-in)</li>
+<li>User identifier (UID)</li>
+<li>Consent versions (version numbers, consent timestamps, and the fact that you confirmed being 18+ for the Terms of Service, this Privacy Policy, and the Commercial Transactions Act Disclosure)</li>
+</ul>
+<p>Passwords are stored only in encrypted form by Firebase Authentication; we cannot read or retrieve the plaintext password.</p>
+
+<h3>1.3 Information Handled by the Pairing Feature</h3>
+<p>Only if cloud sync is enabled and you actively use the pairing feature, the following is handled:</p>
+<ul>
+<li>Pairing invitation codes (issued with an expiration time and consumed only after mutual acceptance)</li>
+<li>The partner's UID (to manage read/write permissions for shared data)</li>
+<li>Shared household data (during pairing, the same data is synced to your partner's device)</li>
+</ul>
+<p>Pairing is established only by your explicit action (issuing or entering an invitation code) and can be terminated at any time by either side. For data handling after unpairing, please refer to Article 6, Paragraph 5 of the Terms of Service.</p>
+
+<h3>1.4 Information Collected Automatically</h3>
+<ul>
+<li>Only when you use the bug report form, and only after your consent, device information is sent (OS version, app version, language setting, currency setting — none of which uniquely identifies a device; only technical information needed to reproduce the bug)</li>
+<li>Receipt information provided by Apple at the time of purchase (transaction ID, purchase date, product ID)</li>
+</ul>
+
+<h3>1.5 Information We Do Not Collect</h3>
+<p>The App <strong>does not collect or store</strong> the following:</p>
+<ul>
+<li>Real name, postal address, phone number, date of birth</li>
+<li>Credit card numbers, bank accounts, or other payment information (payments are handled solely by Apple; we receive only receipt information)</li>
+<li>Location, contacts, photos, camera, microphone, or health data</li>
+<li>Advertising IDs, tracking IDs, or device-unique identifiers (IDFA / IDFV / advertising identifiers, etc.)</li>
+<li>Data for access analytics or behavioral analysis</li>
+</ul>
+
+<h2>Article 2. Purposes of Use</h2>
+<p>Information handled under Article 1 is used only for the following purposes:</p>
+<ol>
+<li>Providing the App's features (recording, displaying, summarizing, and exporting household data)</li>
+<li>Providing the cloud sync feature</li>
+<li>Sharing data between partners via the pairing feature</li>
+<li>Managing consent status (re-acquiring consent upon policy revision, etc.)</li>
+<li>Receiving and responding to bug reports</li>
+<li>Fulfilling legal obligations and protecting our rights</li>
+<li>Responding to unauthorized use, breach of terms, and service interference</li>
+</ol>
+
+<h2>Article 3. Provision to Third Parties and Outsourcing</h2>
+<p>We do not provide users' personal information to third parties except in response to a legal disclosure request.</p>
+<p>However, the following service providers may process data to the extent necessary for operating the service. This constitutes outsourcing under Article 27, Paragraph 5, Item 1 of Japan's Act on the Protection of Personal Information, and does not constitute "provision to a third party" requiring the user's consent.</p>
+
+<h3>3.1 Service Providers</h3>
+<table>
+<tr><th>Provider</th><th>Purpose</th><th>Data Handled</th></tr>
+<tr><td>Google LLC (Firebase)</td><td>Authentication, cloud sync, Cloud Functions, App Check (detection of unauthorized clients)</td><td>Email, UID, household data, settings, consent records</td></tr>
+<tr><td>Apple Inc.</td><td>App Store distribution, StoreKit billing, receipt verification</td><td>Purchase transaction information</td></tr>
+</table>
+<p>For each provider's privacy practices, please refer to their respective privacy policies:</p>
+<ul>
+<li>Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<h3>3.2 International Data Transfer</h3>
+<p>The App's cloud data is primarily stored in Firebase's <strong>asia-northeast1 (Tokyo) region</strong>, but Google LLC may back up or replicate data to servers outside Japan, including in the United States, as operationally required. International transfer also occurs to the extent that Apple's services are used.</p>
+<p>Google LLC and Apple Inc. apply appropriate protective measures under international data protection frameworks (EU Standard Contractual Clauses, U.S. CCPA, APEC CBPR, etc.).</p>
+
+<h2>Article 4. Data Storage Location and Retention Period</h2>
+
+<h3>4.1 Local Storage (On Device)</h3>
+<p>The primary storage location for household data is the local storage (<code>localStorage</code>) on the user's own device where the App is installed. Data is not transmitted to our servers unless you enable cloud sync.</p>
+
+<h3>4.2 Cloud Storage (Optional)</h3>
+<p>Only if you voluntarily enable cloud sync, household data is stored on Firebase (Google LLC) servers. Cloud sync is an optional feature; all core functions of the App are available even when cloud sync is disabled.</p>
+
+<h3>4.3 Retention Period</h3>
+<ul>
+<li>Local data: Until you execute "Delete All Data" or uninstall the App</li>
+<li>Cloud data: Until you execute account deletion (after which data is promptly erased, although full removal from backups may take up to 30 days)</li>
+<li>Consent records and billing history: May be retained for up to 7 years after account deletion as required by law (including in anonymized form)</li>
+</ul>
+
+<h2>Article 5. Users' Rights</h2>
+<p>Users have the following rights regarding their personal information held by us:</p>
+<ol>
+<li><strong>Disclosure request</strong>: To request disclosure of personal information about you that we hold</li>
+<li><strong>Correction / deletion request</strong>: To request correction of incorrect information or deletion of unnecessary information</li>
+<li><strong>Suspension of use</strong>: To request suspension of use beyond the scope necessary for the purposes of use</li>
+<li><strong>Account deletion</strong>: You can delete your account and data at any time from the settings screen in the App</li>
+</ol>
+<p>Please send these requests to the contact in Article 10.</p>
+
+<h2>Article 6. Security Measures</h2>
+<p>We take necessary and appropriate measures to prevent leakage, loss, or damage to users' personal information:</p>
+<ul>
+<li>Encrypted storage of passwords via Firebase Authentication</li>
+<li>Data access control via Firestore Security Rules (users can only access their own data)</li>
+<li>Detection of unauthorized clients via App Check</li>
+<li>TLS encryption of communications</li>
+</ul>
+<p>However, due to the inherent nature of internet services, no security measure can be guaranteed to be complete. Users shall manage their own authentication credentials (such as passwords) at their own responsibility.</p>
+
+<h2>Article 7. Third-Party Services</h2>
+<p>The App uses the following third-party services to provide its functions. For the scope of each service's privacy policy application, refer to Article 3.</p>
+<ul>
+<li><strong>Firebase</strong> (Google LLC): Authentication, cloud sync, Cloud Functions, App Check</li>
+<li><strong>StoreKit</strong> (Apple Inc.): In-app purchase processing</li>
+</ul>
+
+<h2>Article 8. Use by Minors</h2>
+<p>The App is intended for users aged 17 and older. We do not collect information from children under 13 (in compliance with U.S. COPPA). If we learn that a child under 13 has submitted information, we will promptly delete it.</p>
+<p>Minors under 18 may use the App only with the consent of their parent or legal guardian. At first launch, the App requires confirmation that the user is 18+ or has parental/guardian consent.</p>
+
+<h2>Article 9. Policy Revisions</h2>
+<p>We may revise this policy in response to legal changes, service changes, etc. When revisions occur, we will notify users through in-app notifications, re-consent prompts in the settings screen, or announcements on GitHub Pages.</p>
+<p>For material changes, we will obtain renewed consent from users.</p>
+
+<h2>Article 10. Contact</h2>
+<p>Please direct inquiries about this policy, disclosure requests, or complaints to:</p>
+<ul>
+<li><strong>Contact email:</strong> <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></li>
+<li><strong>Bug reports:</strong> <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></li>
+</ul>
+<p>Since the App is operated by a single individual, immediate response may not always be possible. We aim to respond within approximately 7 business days.</p>
+
+<h2>Article 11. Governing Law and Jurisdiction</h2>
+<p>This policy is governed by the laws of Japan. Any disputes regarding this policy are subject to Article 14 of the Terms of Service.</p>
+
+<h2>Article 12. Accredited Personal Information Protection Organizations</h2>
+<p>We do not currently belong to any accredited personal information protection organization. Complaints may be addressed to:</p>
+<ul>
+<li>Personal Information Protection Commission of Japan: <a href="https://www.ppc.go.jp/en/" target="_blank" rel="noopener">https://www.ppc.go.jp/en/</a></li>
+</ul>
+
+<h2>Article 13. Supplementary Provisions for Overseas Residents</h2>
+
+<h3>13.1 EU Residents (GDPR)</h3>
+<p>For EU residents, our legal bases for processing are consent under Article 6(1)(a), contract performance under Article 6(1)(b), and compliance with legal obligations under Article 6(1)(c) of the GDPR. Data subject rights (access, rectification, erasure, restriction of processing, data portability, and objection) are handled in accordance with Article 5.</p>
+
+<h3>13.2 U.S. Residents (CCPA / California)</h3>
+<p>California residents are granted the right to know the categories of information collected, the right to deletion, and the right to opt out of sale under the CCPA. We do not "sell" personal information.</p>
+
+<h3>13.3 Korean Residents (PIPA)</h3>
+<p>Korean residents may request a Korean-language version of this policy by contacting Article 10. Data subject rights are handled in accordance with Article 5 under the Personal Information Protection Act (PIPA).</p>
+
+<h3>13.4 Taiwanese Residents (Personal Data Protection Act)</h3>
+<p>Taiwanese residents may request a Traditional Chinese version of this policy by contacting Article 10. Data subject rights are handled in accordance with Article 5 under the Personal Data Protection Act.</p>
+
+<h3>13.5 Thai Residents (PDPA)</h3>
+<p>For Thai residents, personal information is handled on a consent basis under the PDPA. A Thai-language version of this policy can be requested by contacting Article 10. Data subject rights are handled in accordance with Article 5.</p>
+
+<hr>
+
+<h2>Revision History</h2>
+<ul>
+<li><strong>v3.3 (May 15, 2026):</strong> Rewrote Article 1.3 from "future feature" wording to current-feature wording for the pairing function. Added "data sharing between partners via the pairing function" to Article 2.</li>
+<li><strong>v3.2 (May 14, 2026):</strong> Prepared as the initial App Store release version.</li>
+<li><strong>v3.1 (May 2026):</strong> Clarified the recording of consent timestamps.</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px;"><strong>End of Document</strong></p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- 한국어 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="ko">
+
+<h1>Our Tab 개인정보 처리방침</h1>
+
+<p class="meta"><strong>제정일:</strong> 2026년 5월 14일<br>
+<strong>최종 업데이트:</strong> 2026년 5월 15일<br>
+<strong>버전:</strong> v3.3</p>
+
+<hr>
+
+<p>Taira Sonoda(이하 "당사")는 iOS 앱 "Our Tab"(이하 "본 앱")에서 사용자의 개인정보 및 이용 데이터를 아래와 같이 처리합니다. 본 방침은 본 앱의 이용약관과 일체로 적용되며, 양자가 모순되는 경우 본 방침의 기재가 우선합니다.</p>
+
+<p>본 앱은 일본국 거주자를 주된 대상으로 하며, 기타 국가·지역에서의 이용에 대해서는 해당 국가·지역의 관련 법령(GDPR 등)과 정합하는 범위에서 본 방침을 적용합니다.</p>
+
+<h2>제1조 처리하는 정보</h2>
+
+<h3>1.1 사용자가 직접 입력하는 정보</h3>
+<ul>
+<li>표시명(본인·파트너의 호칭)</li>
+<li>가계 데이터(지출 금액, 카테고리, 메모, 날짜, 결제자, 부담률, 고정 지출, 빠른 입력, 설정, 노트, 캘린더 스탬프 등)</li>
+</ul>
+
+<h3>1.2 인증에 따라 취득하는 정보</h3>
+<p>클라우드 동기화(선택)를 이용하는 경우에만 다음을 처리합니다.</p>
+<ul>
+<li>이메일 주소 및 비밀번호(Firebase Authentication 의 이메일/비밀번호 인증 경유)</li>
+<li>사용자 식별자(UID)</li>
+<li>동의 완료 버전(이용약관·본 방침·특정상거래법 표기의 각 버전 번호, 동의 일시, 만 18세 이상 동의 사실)</li>
+</ul>
+<p>비밀번호는 Firebase Authentication 에 의해 암호화된 형태로만 보관되며, 당사는 비밀번호의 평문을 취득·열람할 수 없습니다.</p>
+
+<h3>1.3 페어링 기능에서 처리하는 정보</h3>
+<p>클라우드 동기화를 활성화한 후 사용자가 페어링 기능을 이용하는 경우에 한하여 다음을 처리합니다.</p>
+<ul>
+<li>페어링 초대 코드(유효기간이 있으며 쌍방의 합의에 의한 수락 후 소비)</li>
+<li>페어링 상대방의 UID(공유 데이터의 읽기/쓰기 권한 관리를 위해)</li>
+<li>공유 가계 데이터(페어링 중 상대방 단말에도 동일한 가계 데이터가 동기화됩니다)</li>
+</ul>
+<p>페어링은 사용자의 명시적 조작(초대 코드의 발행·입력)에 의해 성립되며, 어느 한쪽의 조작만으로 언제든지 해제할 수 있습니다. 페어링 해제 후의 데이터 처리에 대해서는 이용약관 제6조 제5항을 참조해 주세요.</p>
+
+<h3>1.4 자동으로 취득하는 정보</h3>
+<ul>
+<li>버그 신고 양식을 이용한 경우에 한하여, 사용자가 동의한 후 송신되는 디바이스 정보(OS 버전, 앱 버전, 언어 설정, 통화 설정. 모두 단말기를 고유하게 식별하는 정보가 아니며, 버그 재현에 필요한 기술 정보로 한정됩니다)</li>
+<li>결제 처리 시 Apple 로부터 제공되는 영수증 정보(구매 트랜잭션 ID, 구매 일시, 상품 ID)</li>
+</ul>
+
+<h3>1.5 처리하지 않는 정보</h3>
+<p>본 앱은 다음 정보를 <strong>수집도 보관도 하지 않습니다</strong>.</p>
+<ul>
+<li>성명, 주소, 전화번호, 생년월일</li>
+<li>신용카드 번호, 은행 계좌 등의 결제 정보(결제는 Apple 만이 처리하며, 당사는 영수증 정보 외에 취득하지 않습니다)</li>
+<li>위치 정보, 연락처, 사진, 카메라, 마이크, 건강 데이터</li>
+<li>광고 ID, 추적 ID, 단말 고유 식별자(IDFA / IDFV / 광고 식별자 등)</li>
+<li>접속 분석·행동 분석을 위한 데이터</li>
+</ul>
+
+<h2>제2조 이용 목적</h2>
+<p>제1조에서 처리하는 정보는 다음 목적에만 이용합니다.</p>
+<ol>
+<li>본 앱의 기능 제공(가계 데이터의 기록·표시·집계·내보내기)</li>
+<li>클라우드 동기화 기능의 제공</li>
+<li>페어링 기능에 의한 파트너 간 데이터 공유</li>
+<li>동의 취득 상황의 관리(약관 개정 시 재동의 취득 등)</li>
+<li>버그 신고의 수령 및 대응</li>
+<li>법령상의 의무 이행 및 권리 보전</li>
+<li>부정 이용, 약관 위반, 서비스 방해 행위에 대한 대응</li>
+</ol>
+
+<h2>제3조 제3자 제공 및 업무 위탁</h2>
+<p>당사는 법령에 근거한 공개 요청이 있는 경우를 제외하고, 사용자의 개인정보를 제3자에게 제공하지 않습니다.</p>
+<p>다만, 다음의 업무 위탁처가 서비스 운영상 필요한 범위에서 데이터를 처리하는 경우가 있습니다. 이것은 일본 개인정보보호법 제27조 제5항 제1호에 근거한 업무 위탁이며, 본인의 동의를 요하는 "제3자 제공"에 해당하지 않습니다.</p>
+
+<h3>3.1 업무 위탁처</h3>
+<table>
+<tr><th>위탁처</th><th>용도</th><th>처리하는 데이터</th></tr>
+<tr><td>Google LLC (Firebase)</td><td>인증, 클라우드 동기화, Cloud Functions, App Check (부정 클라이언트 검지)</td><td>이메일 주소, UID, 가계 데이터, 설정, 동의 취득 기록</td></tr>
+<tr><td>Apple Inc.</td><td>App Store 배포, StoreKit 결제 처리, 영수증 검증</td><td>구매 트랜잭션 정보</td></tr>
+</table>
+<p>각 위탁처의 개인정보 관행에 대해서는 각자의 개인정보 처리방침을 참조해 주세요.</p>
+<ul>
+<li>Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<h3>3.2 국외 이전에 대하여</h3>
+<p>본 앱의 클라우드 데이터는 Firebase의 <strong>asia-northeast1(도쿄 리전)</strong>에 주로 배치되지만, 운영상 필요에 따라 Google LLC에 의해 미국을 포함한 국외 서버에 백업·복제될 수 있습니다. Apple의 서비스를 이용하는 범위에서도 국외 이전이 발생합니다.</p>
+<p>Google LLC 및 Apple Inc.는 각각 국제적인 데이터 보호 프레임워크(EU SCC, 미국 CCPA, APEC CBPR 등)에 근거하여 적절한 보호 조치를 강구하고 있습니다.</p>
+
+<h2>제4조 데이터의 보관 장소와 보관 기간</h2>
+
+<h3>4.1 로컬 보관(단말기 내)</h3>
+<p>가계 데이터의 주된 보관 장소는 본 앱을 설치한 사용자 본인의 단말기 내 로컬 스토리지(<code>localStorage</code>)입니다. 클라우드 동기화를 활성화하지 않는 한, 당사의 서버로 송신되지 않습니다.</p>
+
+<h3>4.2 클라우드 보관(선택)</h3>
+<p>사용자가 직접 클라우드 동기화를 활성화한 경우에 한하여, 가계 데이터가 Firebase(Google LLC) 서버에 보관됩니다. 클라우드 동기화는 선택 기능이며, 비활성화 상태로도 본 앱의 모든 기본 기능을 이용할 수 있습니다.</p>
+
+<h3>4.3 보관 기간</h3>
+<ul>
+<li>로컬 데이터: 사용자가 "모든 데이터 삭제"를 실행하거나 본 앱을 삭제할 때까지</li>
+<li>클라우드 데이터: 사용자가 계정 삭제를 실행할 때까지(삭제 후에는 신속히 소거되지만, 백업으로부터의 완전 소거에는 최대 30일이 소요될 수 있습니다)</li>
+<li>동의 취득 기록 및 결제 이력: 법령상의 보관 의무에 따라 계정 삭제 후에도 최대 7년간 보관되는 경우가 있습니다(개인을 특정할 수 없는 형태로 가공하여 보관하는 경우 포함)</li>
+</ul>
+
+<h2>제5조 사용자의 권리</h2>
+<p>사용자는 당사가 보유한 본인의 개인정보에 대해 다음 권리를 가집니다.</p>
+<ol>
+<li><strong>공개 청구</strong>: 당사가 보유한 본인의 개인정보 공개를 요구하는 것</li>
+<li><strong>정정·삭제 청구</strong>: 잘못된 정보의 정정, 불필요한 정보의 삭제를 요구하는 것</li>
+<li><strong>이용 정지 청구</strong>: 이용 목적의 달성에 필요한 범위를 초과한 이용의 정지를 요구하는 것</li>
+<li><strong>계정 삭제</strong>: 앱 내 설정 화면에서 언제든지 본인의 계정과 데이터를 삭제할 수 있습니다</li>
+</ol>
+<p>이러한 청구는 제10조의 연락처로 보내주세요.</p>
+
+<h2>제6조 보안 조치</h2>
+<p>당사는 사용자의 개인정보의 누설, 멸실 또는 훼손 방지 등의 안전 관리를 위해 필요하고 적절한 조치를 강구합니다.</p>
+<ul>
+<li>Firebase Authentication에 의한 비밀번호의 암호화 보관</li>
+<li>Firestore Security Rules에 의한 데이터 액세스 제어(사용자는 본인 데이터만 액세스 가능)</li>
+<li>App Check에 의한 부정 클라이언트의 검지</li>
+<li>TLS에 의한 통신의 암호화</li>
+</ul>
+<p>다만, 인터넷을 통한 서비스의 성질상 어떠한 안전 관리 조치도 완전한 것이라고 보장할 수 없습니다. 사용자는 자기 책임하에 본인의 비밀번호 등 인증 정보를 적절히 관리해야 합니다.</p>
+
+<h2>제7조 제3자 서비스</h2>
+<p>본 앱은 기능 제공을 위해 다음의 제3자 서비스를 이용합니다. 각 서비스의 개인정보 처리방침이 적용되는 범위에 대해서는 제3조를 참조해 주세요.</p>
+<ul>
+<li><strong>Firebase</strong> (Google LLC): 인증, 클라우드 동기화, Cloud Functions, App Check</li>
+<li><strong>StoreKit</strong> (Apple Inc.): 앱 내 결제의 처리</li>
+</ul>
+
+<h2>제8조 미성년자의 이용</h2>
+<p>본 앱은 만 17세 이상을 대상으로 하며, 만 13세 미만으로부터의 정보 수집은 하지 않습니다(미국 COPPA 대응). 만 13세 미만의 사용자가 정보를 송신한 것이 판명된 경우, 당사는 신속히 해당 정보를 삭제합니다.</p>
+<p>미성년자(만 18세 미만)가 본 앱을 이용할 경우 보호자(법정대리인)의 동의 하에 이용하는 것으로 합니다. 본 앱은 초회 기동 시 만 18세 이상 또는 법정대리인의 동의를 확인합니다.</p>
+
+<h2>제9조 본 방침의 개정</h2>
+<p>당사는 법령의 개정, 서비스 내용의 변경 등에 따라 본 방침을 개정하는 경우가 있습니다. 개정을 실시할 경우 본 앱 내의 통지, 설정 화면에서의 재동의 프롬프트, 또는 GitHub Pages에서의 고지에 의해 사용자에게 통지합니다.</p>
+<p>중요한 변경을 실시할 경우 사용자로부터 다시 동의를 취득합니다.</p>
+
+<h2>제10조 문의 창구</h2>
+<p>본 방침에 관한 문의, 공개 청구, 고충 등은 아래로 보내주세요.</p>
+<ul>
+<li><strong>연락처 이메일:</strong> <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></li>
+<li><strong>버그 신고:</strong> <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></li>
+</ul>
+<p>개인이 운영하고 있기 때문에 즉시 대응이 어려운 경우가 있습니다만, 기준으로 7영업일 정도를 목표로 회답하도록 노력하고 있습니다.</p>
+
+<h2>제11조 준거법 및 관할</h2>
+<p>본 방침은 일본법에 준거하며, 본 방침에 관한 일체의 분쟁은 이용약관 제14조의 규정에 따릅니다.</p>
+
+<h2>제12조 인정 개인정보보호단체</h2>
+<p>당사는 현시점에서 인정 개인정보보호단체에 소속되어 있지 않습니다. 개인정보보호위원회로의 고충 신청 등의 안내는 다음과 같습니다.</p>
+<ul>
+<li>일본 개인정보보호위원회: <a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">https://www.ppc.go.jp/</a></li>
+</ul>
+
+<h2>제13조 국외 거주자에 대한 적용에 관한 보충</h2>
+
+<h3>13.1 EU 거주자(GDPR)</h3>
+<p>EU 거주자에 대해서는 GDPR 제6조 제1항 (a)호에 근거한 동의를, (b)호에 근거한 계약 이행을, (c)호에 근거한 법적 의무 준수를 각각 처리 근거로 합니다. 데이터 주체의 권리(액세스권·정정권·소거권·처리 제한권·데이터 이동권·이의 신청권)에 대해서는 제5조에 준하여 대응합니다.</p>
+
+<h3>13.2 미국 거주자(CCPA / 캘리포니아주)</h3>
+<p>캘리포니아주 거주자에 대해서는 CCPA에 근거하여 수집한 정보의 카테고리의 공개·삭제 청구·판매 거부권을 인정합니다. 당사는 개인정보를 "판매"하지 않습니다.</p>
+
+<h3>13.3 한국 거주자(PIPA)</h3>
+<p>한국 거주자에 대해서는 개인정보보호법(PIPA)에 근거하여 본 방침의 한국어판을 제10조 연락처까지 청구할 수 있습니다. 데이터 주체의 권리는 제5조에 준합니다.</p>
+
+<h3>13.4 대만 거주자(개인자료보호법)</h3>
+<p>대만 거주자에 대해서는 개인자료보호법에 근거하여 본 방침의 번체자 중국어판을 제10조 연락처까지 청구할 수 있습니다. 데이터 주체의 권리는 제5조에 준합니다.</p>
+
+<h3>13.5 태국 거주자(PDPA)</h3>
+<p>태국 거주자에 대해서는 PDPA에 근거하여 동의 베이스로 개인정보를 처리합니다. 본 방침의 태국어판을 제10조 연락처까지 청구할 수 있습니다. 데이터 주체의 권리는 제5조에 준합니다.</p>
+
+<hr>
+
+<h2>개정 이력</h2>
+<ul>
+<li><strong>v3.3 (2026년 5월 15일):</strong> 제1조 1.3항 페어링 기능을 "장래 기능" 기재에서 현행 기능으로서의 기재로 다시 씀. 제2조 이용 목적에 "페어링 기능에 의한 파트너 간 데이터 공유"를 추가.</li>
+<li><strong>v3.2 (2026년 5월 14일):</strong> 초회 App Store 릴리스판으로서 정비.</li>
+<li><strong>v3.1 (2026년 5월):</strong> 동의 취득 일시 취득을 명문화.</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px;"><strong>이상</strong></p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- 繁體中文 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="zh-TW">
+
+<h1>Our Tab 隱私權政策</h1>
+
+<p class="meta"><strong>制定日:</strong> 2026年5月14日<br>
+<strong>最後更新日:</strong> 2026年5月15日<br>
+<strong>版本:</strong> v3.3</p>
+
+<hr>
+
+<p>Taira Sonoda(以下稱「本方」)就 iOS 應用程式「Our Tab」(以下稱「本應用程式」)中使用者的個人資料、使用資料,依以下方式進行處理。本政策與本應用程式之使用條款一體適用,二者牴觸時,以本政策之記載優先。</p>
+
+<p>本應用程式以日本國居民為主要對象,其他國家或地區之使用,則於與該國家或地區相關法令(GDPR 等)整合之範圍內適用本政策。</p>
+
+<h2>第1條 處理之資料</h2>
+
+<h3>1.1 使用者直接輸入之資料</h3>
+<ul>
+<li>顯示名稱(本人、伴侶之稱呼)</li>
+<li>家計資料(支出金額、類別、備註、日期、付款者、分擔比率、固定支出、快捷輸入、設定、筆記、行事曆印章等)</li>
+</ul>
+
+<h3>1.2 認證時取得之資料</h3>
+<p>僅於使用雲端同步(選用)時,處理以下資料。</p>
+<ul>
+<li>電子郵件位址與密碼(透過 Firebase Authentication 之電子郵件/密碼認證)</li>
+<li>使用者識別碼(UID)</li>
+<li>同意完成版本(使用條款、本政策、特定商業交易法揭示之各版本編號、同意日期時間、滿 18 歲同意事實)</li>
+</ul>
+<p>密碼僅以 Firebase Authentication 加密形式保存,本方無法取得或閱覽密碼明文。</p>
+
+<h3>1.3 配對功能處理之資料</h3>
+<p>僅於啟用雲端同步後使用者使用配對功能時,處理以下資料。</p>
+<ul>
+<li>配對邀請碼(附效期生成,雙方同意接受後消費)</li>
+<li>配對對象之 UID(用以管理共用資料之讀寫權限)</li>
+<li>共用家計資料(配對中,相同家計資料會同步至對方裝置)</li>
+</ul>
+<p>配對由使用者明示之操作(發行、輸入邀請碼)成立,任一方均可隨時單方解除。配對解除後之資料處理,請參照使用條款第6條第5項。</p>
+
+<h3>1.4 自動取得之資料</h3>
+<ul>
+<li>僅於使用故障回報表單,且使用者同意後送出之裝置資訊(作業系統版本、應用程式版本、語言設定、貨幣設定。皆非可唯一識別裝置之資訊,僅限重現故障所需之技術資訊)</li>
+<li>付費處理時 Apple 提供之收據資訊(購買交易 ID、購買日期時間、商品 ID)</li>
+</ul>
+
+<h3>1.5 不處理之資料</h3>
+<p>本應用程式<strong>不收集亦不保存</strong>下列資料。</p>
+<ul>
+<li>姓名、住址、電話號碼、出生年月日</li>
+<li>信用卡號、銀行帳戶等付款資訊(付款僅由 Apple 處理,本方除收據資訊外不取得)</li>
+<li>位置資訊、聯絡人、相片、相機、麥克風、健康資料</li>
+<li>廣告 ID、追蹤 ID、裝置固有識別碼(IDFA / IDFV / 廣告識別碼等)</li>
+<li>用於存取分析、行為分析之資料</li>
+</ul>
+
+<h2>第2條 利用目的</h2>
+<p>第1條處理之資料,僅作以下用途。</p>
+<ol>
+<li>本應用程式之功能提供(家計資料之記錄、顯示、彙總、匯出)</li>
+<li>雲端同步功能之提供</li>
+<li>透過配對功能之伴侶間資料共用</li>
+<li>同意取得狀況之管理(條款修訂時之重新取得同意等)</li>
+<li>故障回報之受領及處理</li>
+<li>法令上義務之履行及權利之保全</li>
+<li>不正當使用、違反條款、妨礙服務行為之處理</li>
+</ol>
+
+<h2>第3條 第三人提供及業務委託</h2>
+<p>除依法令揭露請求外,本方不將使用者個人資料提供予第三人。</p>
+<p>惟下列業務委託對象可能於服務營運所必要之範圍內處理資料。此屬日本個人資料保護法第27條第5項第1款之業務委託,不屬於須本人同意之「第三人提供」。</p>
+
+<h3>3.1 業務委託對象</h3>
+<table>
+<tr><th>委託對象</th><th>用途</th><th>處理之資料</th></tr>
+<tr><td>Google LLC (Firebase)</td><td>認證、雲端同步、Cloud Functions、App Check (不正客戶端偵測)</td><td>電子郵件位址、UID、家計資料、設定、同意取得紀錄</td></tr>
+<tr><td>Apple Inc.</td><td>App Store 配送、StoreKit 付費處理、收據驗證</td><td>購買交易資訊</td></tr>
+</table>
+<p>各委託對象之隱私權實務,請參照各自之隱私權政策。</p>
+<ul>
+<li>Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<h3>3.2 國外傳輸</h3>
+<p>本應用程式之雲端資料主要配置於 Firebase 之 <strong>asia-northeast1(東京區)</strong>,惟視營運需要,Google LLC 可能將資料備份、複製至包含美國在內之國外伺服器。使用 Apple 服務之範圍亦會發生國外傳輸。</p>
+<p>Google LLC 及 Apple Inc. 分別依國際資料保護架構(EU SCC、美國 CCPA、APEC CBPR 等)採取適當保護措施。</p>
+
+<h2>第4條 資料之保存場所及保存期間</h2>
+
+<h3>4.1 本機保存(裝置內)</h3>
+<p>家計資料之主要保存場所為安裝本應用程式之使用者本人裝置內本機儲存空間(<code>localStorage</code>)。除非啟用雲端同步,否則不傳送至本方伺服器。</p>
+
+<h3>4.2 雲端保存(選用)</h3>
+<p>僅於使用者自行啟用雲端同步時,家計資料會保存於 Firebase(Google LLC)伺服器。雲端同步為選用功能,即使停用,本應用程式之所有基本功能仍可使用。</p>
+
+<h3>4.3 保存期間</h3>
+<ul>
+<li>本機資料:至使用者執行「刪除所有資料」或解除安裝本應用程式為止</li>
+<li>雲端資料:至使用者執行帳戶刪除為止(刪除後迅速清除,惟自備份完全清除可能需最多 30 日)</li>
+<li>同意取得紀錄及付費歷史:依法令保管義務,於帳戶刪除後仍可能保存最多 7 年(包含加工為無法辨識個人之形式保存之情形)</li>
+</ul>
+
+<h2>第5條 使用者之權利</h2>
+<p>使用者就本方保有之本人個人資料,擁有以下權利。</p>
+<ol>
+<li><strong>揭露請求</strong>:請求揭露本方保有之本人個人資料</li>
+<li><strong>更正、刪除請求</strong>:請求更正錯誤之資料、刪除不必要之資料</li>
+<li><strong>停止利用請求</strong>:請求停止超越利用目的達成所必要範圍之利用</li>
+<li><strong>帳戶刪除</strong>:可隨時自應用程式內設定畫面刪除本人之帳戶及資料</li>
+</ol>
+<p>上述請求請寄送至第10條之聯絡方式。</p>
+
+<h2>第6條 安全措施</h2>
+<p>本方為防止使用者個人資料之洩漏、滅失或毀損等之安全管理,採取必要且適當之措施。</p>
+<ul>
+<li>透過 Firebase Authentication 加密保存密碼</li>
+<li>透過 Firestore Security Rules 進行資料存取控制(使用者僅可存取本人資料)</li>
+<li>透過 App Check 偵測不正客戶端</li>
+<li>透過 TLS 加密通訊</li>
+</ul>
+<p>惟因網際網路服務性質,無法保證任何安全管理措施係完整無缺。使用者應自負責任,適當管理密碼等認證資訊。</p>
+
+<h2>第7條 第三人服務</h2>
+<p>本應用程式為提供功能,使用下列第三人服務。各服務之隱私權政策適用範圍,請參照第3條。</p>
+<ul>
+<li><strong>Firebase</strong>(Google LLC):認證、雲端同步、Cloud Functions、App Check</li>
+<li><strong>StoreKit</strong>(Apple Inc.):應用程式內付費處理</li>
+</ul>
+
+<h2>第8條 未成年人之使用</h2>
+<p>本應用程式以 17 歲以上為對象,不收集 13 歲以下之資料(對應美國 COPPA)。如查明 13 歲以下使用者送出資料,本方將迅速刪除該資料。</p>
+<p>未成年人(未滿 18 歲)使用本應用程式時,應於監護人(法定代理人)同意下使用。本應用程式於首次啟動時確認 18 歲以上或法定代理人之同意。</p>
+
+<h2>第9條 本政策之修訂</h2>
+<p>本方得依法令修訂、服務內容變更等,修訂本政策。修訂時,將透過本應用程式內通知、設定畫面之重新同意提示、或 GitHub Pages 之公告,通知使用者。</p>
+<p>進行重大變更時,將自使用者取得重新同意。</p>
+
+<h2>第10條 諮詢窗口</h2>
+<p>本政策相關諮詢、揭露請求、申訴等,請寄送至下方。</p>
+<ul>
+<li><strong>聯絡電子郵件:</strong> <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></li>
+<li><strong>故障回報:</strong> <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></li>
+</ul>
+<p>由個人營運,可能難以即時回應,惟以 7 個營業日為目標努力回覆。</p>
+
+<h2>第11條 準據法及管轄</h2>
+<p>本政策依日本法解釋,本政策相關之一切紛爭,依使用條款第14條之規定。</p>
+
+<h2>第12條 認定個人資料保護團體</h2>
+<p>本方目前未加入任何認定個人資料保護團體。日本個人資料保護委員會之申訴管道如下。</p>
+<ul>
+<li>日本個人資料保護委員會:<a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">https://www.ppc.go.jp/</a></li>
+</ul>
+
+<h2>第13條 國外居住者適用之補充</h2>
+
+<h3>13.1 EU 居住者(GDPR)</h3>
+<p>EU 居住者,本方依 GDPR 第6條第1項 (a) 款之同意、(b) 款之契約履行、(c) 款之法律義務遵守,作為處理依據。資料主體權利(存取權、更正權、清除權、處理限制權、資料可攜權、異議權),依第5條規定處理。</p>
+
+<h3>13.2 美國居住者(CCPA / 加州)</h3>
+<p>加州居住者依 CCPA 享有所收集資料類別之揭露、刪除請求、銷售拒絕權。本方未「銷售」個人資料。</p>
+
+<h3>13.3 韓國居住者(PIPA)</h3>
+<p>韓國居住者依個人資料保護法(PIPA),可向第10條聯絡方式請求本政策之韓文版。資料主體權利依第5條規定處理。</p>
+
+<h3>13.4 台灣居住者(個人資料保護法)</h3>
+<p>台灣居住者依個人資料保護法,可向第10條聯絡方式請求本政策之繁體中文版。資料主體權利依第5條規定處理。</p>
+
+<h3>13.5 泰國居住者(PDPA)</h3>
+<p>泰國居住者依 PDPA,以同意為基礎處理個人資料。可向第10條聯絡方式請求本政策之泰文版。資料主體權利依第5條規定處理。</p>
+
+<hr>
+
+<h2>修訂紀錄</h2>
+<ul>
+<li><strong>v3.3(2026年5月15日):</strong>第1條 1.3項 將配對功能由「未來功能」描述改寫為現行功能描述。第2條利用目的新增「透過配對功能之伴侶間資料共用」。</li>
+<li><strong>v3.2(2026年5月14日):</strong>作為首次 App Store 發行版整備。</li>
+<li><strong>v3.1(2026年5月):</strong>明文化同意取得日期時間之取得。</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px;"><strong>以上</strong></p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- ภาษาไทย -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="th">
+
+<h1>Our Tab — นโยบายความเป็นส่วนตัว</h1>
+
+<p class="meta"><strong>วันที่ประกาศใช้:</strong> 14 พฤษภาคม 2026<br>
+<strong>ปรับปรุงล่าสุด:</strong> 15 พฤษภาคม 2026<br>
+<strong>เวอร์ชัน:</strong> v3.3</p>
+
+<hr>
+
+<p>Taira Sonoda (ต่อไปนี้เรียกว่า "เรา") จัดการข้อมูลส่วนบุคคลและข้อมูลการใช้งานของผู้ใช้ในแอปพลิเคชัน iOS "Our Tab" (ต่อไปนี้เรียกว่า "แอป") ตามที่กำหนดไว้ในนโยบายนี้ นโยบายนี้บังคับใช้รวมกับข้อกำหนดการใช้บริการของแอป และในกรณีที่มีความขัดแย้ง ให้ถือนโยบายนี้เป็นสำคัญ</p>
+
+<p>แอปนี้มีกลุ่มเป้าหมายหลักเป็นผู้พำนักในประเทศญี่ปุ่น สำหรับการใช้งานจากประเทศหรือภูมิภาคอื่น นโยบายนี้จะใช้บังคับในขอบเขตที่สอดคล้องกับกฎหมายและข้อบังคับของเขตอำนาจศาลนั้น (เช่น GDPR)</p>
+
+<h2>มาตรา 1 ข้อมูลที่เราจัดการ</h2>
+
+<h3>1.1 ข้อมูลที่ผู้ใช้ป้อนโดยตรง</h3>
+<ul>
+<li>ชื่อที่แสดง (ชื่อเรียกของตนเองและคู่)</li>
+<li>ข้อมูลบัญชีครัวเรือน (จำนวนเงินค่าใช้จ่าย หมวดหมู่ บันทึก วันที่ ผู้จ่าย อัตราส่วนการแบ่ง รายจ่ายประจำ การป้อนข้อมูลด่วน การตั้งค่า บันทึก ตราประทับปฏิทิน ฯลฯ)</li>
+</ul>
+
+<h3>1.2 ข้อมูลที่ได้รับจากการยืนยันตัวตน</h3>
+<p>เฉพาะกรณีที่ใช้การซิงค์คลาวด์ (โดยสมัครใจ) เราจะจัดการข้อมูลต่อไปนี้</p>
+<ul>
+<li>อีเมลและรหัสผ่าน (ผ่านการยืนยันตัวตนอีเมล/รหัสผ่านของ Firebase Authentication)</li>
+<li>รหัสประจำตัวผู้ใช้ (UID)</li>
+<li>เวอร์ชันการยินยอม (หมายเลขเวอร์ชันของข้อกำหนดการใช้บริการ นโยบายนี้ และการแจ้งตามกฎหมายธุรกรรมเชิงพาณิชย์ วันเวลาที่ยินยอม และข้อเท็จจริงที่ยืนยันอายุ 18 ปีขึ้นไป)</li>
+</ul>
+<p>รหัสผ่านถูกจัดเก็บในรูปแบบที่เข้ารหัสโดย Firebase Authentication เท่านั้น เราไม่สามารถอ่านหรือเรียกดูรหัสผ่านในรูปแบบข้อความธรรมดาได้</p>
+
+<h3>1.3 ข้อมูลที่จัดการโดยฟีเจอร์การจับคู่</h3>
+<p>เฉพาะกรณีที่เปิดใช้การซิงค์คลาวด์และผู้ใช้ใช้ฟีเจอร์การจับคู่ เราจะจัดการข้อมูลต่อไปนี้</p>
+<ul>
+<li>รหัสคำเชิญการจับคู่ (ออกพร้อมเวลาหมดอายุ และใช้หลังจากการยอมรับร่วมกัน)</li>
+<li>UID ของคู่ (เพื่อจัดการสิทธิ์การอ่าน/เขียนสำหรับข้อมูลที่แชร์)</li>
+<li>ข้อมูลบัญชีครัวเรือนที่แชร์ (ระหว่างจับคู่ ข้อมูลเดียวกันจะถูกซิงค์ไปยังอุปกรณ์ของคู่)</li>
+</ul>
+<p>การจับคู่จะเกิดขึ้นเฉพาะเมื่อมีการดำเนินการที่ชัดเจนของผู้ใช้ (การออกหรือป้อนรหัสคำเชิญ) และฝ่ายใดฝ่ายหนึ่งสามารถยกเลิกได้ทุกเมื่อ สำหรับการจัดการข้อมูลหลังการยกเลิกการจับคู่ โปรดดูข้อกำหนดการใช้บริการ มาตรา 6 วรรค 5</p>
+
+<h3>1.4 ข้อมูลที่รวบรวมโดยอัตโนมัติ</h3>
+<ul>
+<li>เฉพาะเมื่อใช้แบบฟอร์มรายงานข้อบกพร่อง และเฉพาะหลังได้รับความยินยอมจากผู้ใช้ ข้อมูลอุปกรณ์ที่ส่ง (เวอร์ชันระบบปฏิบัติการ เวอร์ชันแอป การตั้งค่าภาษา การตั้งค่าสกุลเงิน — ทั้งหมดไม่ใช่ข้อมูลที่ระบุตัวอุปกรณ์ได้อย่างเป็นเอกลักษณ์ มีเพียงข้อมูลทางเทคนิคที่จำเป็นในการทำซ้ำข้อบกพร่อง)</li>
+<li>ข้อมูลใบเสร็จที่ Apple มอบให้เมื่อมีการชำระเงิน (รหัสธุรกรรมการซื้อ วันเวลาการซื้อ รหัสสินค้า)</li>
+</ul>
+
+<h3>1.5 ข้อมูลที่เราไม่จัดการ</h3>
+<p>แอปนี้<strong>ไม่รวบรวมหรือจัดเก็บ</strong>ข้อมูลต่อไปนี้</p>
+<ul>
+<li>ชื่อ-นามสกุลจริง ที่อยู่ หมายเลขโทรศัพท์ วันเดือนปีเกิด</li>
+<li>หมายเลขบัตรเครดิต บัญชีธนาคาร หรือข้อมูลการชำระเงินอื่น ๆ (การชำระเงินดำเนินการโดย Apple เท่านั้น เราได้รับเพียงข้อมูลใบเสร็จเท่านั้น)</li>
+<li>ข้อมูลตำแหน่ง รายชื่อผู้ติดต่อ รูปภาพ กล้อง ไมโครโฟน หรือข้อมูลสุขภาพ</li>
+<li>รหัสโฆษณา รหัสการติดตาม หรือตัวระบุเฉพาะของอุปกรณ์ (IDFA / IDFV / รหัสโฆษณา ฯลฯ)</li>
+<li>ข้อมูลสำหรับการวิเคราะห์การเข้าถึงหรือการวิเคราะห์พฤติกรรม</li>
+</ul>
+
+<h2>มาตรา 2 วัตถุประสงค์ของการใช้</h2>
+<p>ข้อมูลที่จัดการตามมาตรา 1 จะถูกใช้เพื่อวัตถุประสงค์ต่อไปนี้เท่านั้น</p>
+<ol>
+<li>การให้บริการฟีเจอร์ของแอป (การบันทึก แสดง สรุป และส่งออกข้อมูลบัญชีครัวเรือน)</li>
+<li>การให้บริการฟีเจอร์การซิงค์คลาวด์</li>
+<li>การแชร์ข้อมูลระหว่างคู่ผ่านฟีเจอร์การจับคู่</li>
+<li>การจัดการสถานะการยินยอม (การได้รับความยินยอมซ้ำเมื่อมีการแก้ไขข้อกำหนด เป็นต้น)</li>
+<li>การรับและตอบสนองต่อรายงานข้อบกพร่อง</li>
+<li>การปฏิบัติตามภาระผูกพันทางกฎหมายและการปกป้องสิทธิของเรา</li>
+<li>การตอบสนองต่อการใช้งานโดยไม่ได้รับอนุญาต การละเมิดข้อกำหนด และการรบกวนบริการ</li>
+</ol>
+
+<h2>มาตรา 3 การให้บุคคลที่สามและการมอบหมายงาน</h2>
+<p>เราไม่ให้ข้อมูลส่วนบุคคลของผู้ใช้แก่บุคคลที่สาม ยกเว้นในการตอบสนองต่อคำขอเปิดเผยข้อมูลตามกฎหมาย</p>
+<p>อย่างไรก็ตาม ผู้ให้บริการต่อไปนี้อาจประมวลผลข้อมูลในขอบเขตที่จำเป็นต่อการดำเนินงานของบริการ ซึ่งถือเป็นการมอบหมายงานตามมาตรา 27 วรรค 5 ข้อ 1 ของกฎหมายคุ้มครองข้อมูลส่วนบุคคลของญี่ปุ่น และไม่ถือเป็น "การให้บุคคลที่สาม" ที่ต้องได้รับความยินยอมจากผู้ใช้</p>
+
+<h3>3.1 ผู้ให้บริการ</h3>
+<table>
+<tr><th>ผู้ให้บริการ</th><th>วัตถุประสงค์</th><th>ข้อมูลที่จัดการ</th></tr>
+<tr><td>Google LLC (Firebase)</td><td>การยืนยันตัวตน การซิงค์คลาวด์ Cloud Functions App Check (การตรวจจับไคลเอ็นต์ที่ไม่ได้รับอนุญาต)</td><td>อีเมล UID ข้อมูลบัญชีครัวเรือน การตั้งค่า บันทึกการยินยอม</td></tr>
+<tr><td>Apple Inc.</td><td>การจัดจำหน่าย App Store การประมวลผลการชำระเงินผ่าน StoreKit การตรวจสอบใบเสร็จ</td><td>ข้อมูลธุรกรรมการซื้อ</td></tr>
+</table>
+<p>สำหรับแนวปฏิบัติด้านความเป็นส่วนตัวของผู้ให้บริการแต่ละราย โปรดดูนโยบายความเป็นส่วนตัวของแต่ละราย</p>
+<ul>
+<li>Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<h3>3.2 การโอนข้อมูลระหว่างประเทศ</h3>
+<p>ข้อมูลคลาวด์ของแอปจัดเก็บไว้เป็นหลักในภูมิภาค <strong>asia-northeast1 (โตเกียว)</strong> ของ Firebase แต่ Google LLC อาจสำรองหรือทำสำเนาข้อมูลไปยังเซิร์ฟเวอร์นอกประเทศญี่ปุ่น รวมถึงในสหรัฐอเมริกา ตามความจำเป็นในการดำเนินงาน การโอนข้อมูลระหว่างประเทศยังเกิดขึ้นในขอบเขตที่ใช้บริการของ Apple ด้วย</p>
+<p>Google LLC และ Apple Inc. ใช้มาตรการคุ้มครองที่เหมาะสมภายใต้กรอบการคุ้มครองข้อมูลระหว่างประเทศ (EU SCC, U.S. CCPA, APEC CBPR ฯลฯ)</p>
+
+<h2>มาตรา 4 สถานที่และระยะเวลาการเก็บรักษาข้อมูล</h2>
+
+<h3>4.1 การจัดเก็บภายในเครื่อง</h3>
+<p>สถานที่เก็บรักษาหลักของข้อมูลบัญชีครัวเรือนคือพื้นที่จัดเก็บภายในเครื่อง (<code>localStorage</code>) ของอุปกรณ์ของผู้ใช้ที่ติดตั้งแอป ข้อมูลจะไม่ถูกส่งไปยังเซิร์ฟเวอร์ของเราเว้นแต่จะเปิดใช้การซิงค์คลาวด์</p>
+
+<h3>4.2 การจัดเก็บคลาวด์ (โดยสมัครใจ)</h3>
+<p>เฉพาะเมื่อผู้ใช้เปิดใช้การซิงค์คลาวด์โดยสมัครใจ ข้อมูลบัญชีครัวเรือนจะถูกจัดเก็บบนเซิร์ฟเวอร์ Firebase (Google LLC) การซิงค์คลาวด์เป็นฟีเจอร์ที่เลือกได้ ฟังก์ชันหลักทั้งหมดของแอปสามารถใช้งานได้แม้ปิดใช้งานการซิงค์คลาวด์</p>
+
+<h3>4.3 ระยะเวลาการเก็บรักษา</h3>
+<ul>
+<li>ข้อมูลภายในเครื่อง: จนกว่าผู้ใช้จะดำเนินการ "ลบข้อมูลทั้งหมด" หรือถอนการติดตั้งแอป</li>
+<li>ข้อมูลคลาวด์: จนกว่าผู้ใช้จะดำเนินการลบบัญชี (หลังจากนั้นข้อมูลจะถูกลบโดยเร็ว แม้ว่าการลบออกจากการสำรองข้อมูลทั้งหมดอาจใช้เวลาสูงสุด 30 วัน)</li>
+<li>บันทึกการยินยอมและประวัติการชำระเงิน: อาจเก็บรักษาไว้สูงสุด 7 ปีหลังการลบบัญชีตามที่กฎหมายกำหนด (รวมถึงในรูปแบบที่ไม่ระบุตัวบุคคล)</li>
+</ul>
+
+<h2>มาตรา 5 สิทธิของผู้ใช้</h2>
+<p>ผู้ใช้มีสิทธิต่อไปนี้เกี่ยวกับข้อมูลส่วนบุคคลที่เราเก็บรักษาไว้</p>
+<ol>
+<li><strong>คำขอเปิดเผย</strong>: ขอให้เปิดเผยข้อมูลส่วนบุคคลที่เราเก็บไว้</li>
+<li><strong>คำขอแก้ไข / ลบ</strong>: ขอให้แก้ไขข้อมูลที่ไม่ถูกต้องหรือลบข้อมูลที่ไม่จำเป็น</li>
+<li><strong>การระงับการใช้</strong>: ขอให้ระงับการใช้นอกเหนือจากขอบเขตที่จำเป็นสำหรับวัตถุประสงค์ของการใช้งาน</li>
+<li><strong>การลบบัญชี</strong>: สามารถลบบัญชีและข้อมูลของคุณได้ทุกเมื่อจากหน้าจอการตั้งค่าในแอป</li>
+</ol>
+<p>กรุณาส่งคำขอเหล่านี้ไปยังที่ติดต่อในมาตรา 10</p>
+
+<h2>มาตรา 6 มาตรการรักษาความปลอดภัย</h2>
+<p>เราใช้มาตรการที่จำเป็นและเหมาะสมเพื่อป้องกันการรั่วไหล สูญหาย หรือเสียหายของข้อมูลส่วนบุคคลของผู้ใช้</p>
+<ul>
+<li>การจัดเก็บรหัสผ่านที่เข้ารหัสผ่าน Firebase Authentication</li>
+<li>การควบคุมการเข้าถึงข้อมูลผ่าน Firestore Security Rules (ผู้ใช้สามารถเข้าถึงเฉพาะข้อมูลของตนเองได้)</li>
+<li>การตรวจจับไคลเอ็นต์ที่ไม่ได้รับอนุญาตผ่าน App Check</li>
+<li>การเข้ารหัสการสื่อสารผ่าน TLS</li>
+</ul>
+<p>อย่างไรก็ตาม เนื่องจากลักษณะของบริการอินเทอร์เน็ต ไม่สามารถรับประกันได้ว่ามาตรการรักษาความปลอดภัยใดจะสมบูรณ์ ผู้ใช้ต้องจัดการข้อมูลรับรองความถูกต้องของตน (เช่น รหัสผ่าน) ด้วยความรับผิดชอบของตนเอง</p>
+
+<h2>มาตรา 7 บริการของบุคคลที่สาม</h2>
+<p>แอปนี้ใช้บริการของบุคคลที่สามต่อไปนี้เพื่อให้บริการฟังก์ชันต่าง ๆ สำหรับขอบเขตการใช้นโยบายความเป็นส่วนตัวของแต่ละบริการ โปรดดูมาตรา 3</p>
+<ul>
+<li><strong>Firebase</strong> (Google LLC): การยืนยันตัวตน การซิงค์คลาวด์ Cloud Functions App Check</li>
+<li><strong>StoreKit</strong> (Apple Inc.): การประมวลผลการซื้อในแอป</li>
+</ul>
+
+<h2>มาตรา 8 การใช้งานโดยผู้เยาว์</h2>
+<p>แอปนี้มีกลุ่มเป้าหมายเป็นผู้ใช้อายุ 17 ปีขึ้นไป เราไม่รวบรวมข้อมูลจากเด็กอายุต่ำกว่า 13 ปี (เพื่อให้สอดคล้องกับ COPPA ของสหรัฐอเมริกา) หากเราทราบว่ามีเด็กอายุต่ำกว่า 13 ปีส่งข้อมูล เราจะลบทันที</p>
+<p>ผู้เยาว์อายุต่ำกว่า 18 ปีอาจใช้แอปนี้ได้เฉพาะเมื่อได้รับความยินยอมจากผู้ปกครองหรือผู้ปกครองตามกฎหมาย เมื่อเปิดใช้งานครั้งแรก แอปจะต้องการยืนยันว่าผู้ใช้มีอายุ 18 ปีขึ้นไปหรือได้รับความยินยอมจากผู้ปกครอง</p>
+
+<h2>มาตรา 9 การแก้ไขนโยบาย</h2>
+<p>เราอาจแก้ไขนโยบายนี้เพื่อตอบสนองต่อการเปลี่ยนแปลงทางกฎหมาย การเปลี่ยนแปลงบริการ ฯลฯ เมื่อมีการแก้ไข เราจะแจ้งให้ผู้ใช้ทราบผ่านการแจ้งเตือนในแอป การขอความยินยอมใหม่ในหน้าจอการตั้งค่า หรือประกาศบน GitHub Pages</p>
+<p>สำหรับการเปลี่ยนแปลงที่สำคัญ เราจะขอความยินยอมใหม่จากผู้ใช้</p>
+
+<h2>มาตรา 10 ช่องทางติดต่อ</h2>
+<p>กรุณาส่งคำถามเกี่ยวกับนโยบายนี้ คำขอเปิดเผย หรือข้อร้องเรียนไปยัง:</p>
+<ul>
+<li><strong>อีเมลติดต่อ:</strong> <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></li>
+<li><strong>รายงานข้อบกพร่อง:</strong> <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></li>
+</ul>
+<p>เนื่องจากแอปดำเนินการโดยบุคคลคนเดียว การตอบสนองทันทีอาจไม่สามารถทำได้เสมอไป เรามุ่งหวังที่จะตอบกลับภายในประมาณ 7 วันทำการ</p>
+
+<h2>มาตรา 11 กฎหมายที่ใช้บังคับและเขตอำนาจศาล</h2>
+<p>นโยบายนี้อยู่ภายใต้กฎหมายของประเทศญี่ปุ่น ข้อพิพาทใด ๆ เกี่ยวกับนโยบายนี้ขึ้นอยู่กับมาตรา 14 ของข้อกำหนดการใช้บริการ</p>
+
+<h2>มาตรา 12 องค์กรคุ้มครองข้อมูลส่วนบุคคลที่ได้รับการรับรอง</h2>
+<p>ปัจจุบันเราไม่ได้สังกัดองค์กรคุ้มครองข้อมูลส่วนบุคคลที่ได้รับการรับรองใด ๆ ข้อร้องเรียนสามารถส่งไปยัง:</p>
+<ul>
+<li>คณะกรรมการคุ้มครองข้อมูลส่วนบุคคลของญี่ปุ่น: <a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">https://www.ppc.go.jp/</a></li>
+</ul>
+
+<h2>มาตรา 13 บทเสริมสำหรับผู้พำนักในต่างประเทศ</h2>
+
+<h3>13.1 ผู้พำนักใน EU (GDPR)</h3>
+<p>สำหรับผู้พำนักใน EU พื้นฐานทางกฎหมายของเราสำหรับการประมวลผลคือความยินยอมตามมาตรา 6(1)(a) การปฏิบัติตามสัญญาตามมาตรา 6(1)(b) และการปฏิบัติตามภาระผูกพันทางกฎหมายตามมาตรา 6(1)(c) ของ GDPR สิทธิของเจ้าของข้อมูล (การเข้าถึง การแก้ไข การลบ การจำกัดการประมวลผล การถ่ายโอนข้อมูล และการคัดค้าน) จะดำเนินการตามมาตรา 5</p>
+
+<h3>13.2 ผู้พำนักในสหรัฐอเมริกา (CCPA / แคลิฟอร์เนีย)</h3>
+<p>ผู้พำนักในแคลิฟอร์เนียได้รับสิทธิในการทราบหมวดหมู่ของข้อมูลที่รวบรวม สิทธิในการลบ และสิทธิในการคัดค้านการขายภายใต้ CCPA เราไม่ "ขาย" ข้อมูลส่วนบุคคล</p>
+
+<h3>13.3 ผู้พำนักในเกาหลี (PIPA)</h3>
+<p>ผู้พำนักในเกาหลีสามารถขอนโยบายเวอร์ชันภาษาเกาหลีได้โดยติดต่อตามมาตรา 10 สิทธิของเจ้าของข้อมูลจะดำเนินการตามมาตรา 5 ภายใต้กฎหมายคุ้มครองข้อมูลส่วนบุคคล (PIPA)</p>
+
+<h3>13.4 ผู้พำนักในไต้หวัน (กฎหมายคุ้มครองข้อมูลส่วนบุคคล)</h3>
+<p>ผู้พำนักในไต้หวันสามารถขอนโยบายเวอร์ชันภาษาจีนตัวเต็มได้โดยติดต่อตามมาตรา 10 สิทธิของเจ้าของข้อมูลจะดำเนินการตามมาตรา 5 ภายใต้กฎหมายคุ้มครองข้อมูลส่วนบุคคล</p>
+
+<h3>13.5 ผู้พำนักในไทย (PDPA)</h3>
+<p>สำหรับผู้พำนักในไทย ข้อมูลส่วนบุคคลจะได้รับการจัดการบนพื้นฐานของความยินยอมภายใต้ PDPA สามารถขอนโยบายเวอร์ชันภาษาไทยได้โดยติดต่อตามมาตรา 10 สิทธิของเจ้าของข้อมูลจะดำเนินการตามมาตรา 5</p>
+
+<hr>
+
+<h2>ประวัติการแก้ไข</h2>
+<ul>
+<li><strong>v3.3 (15 พฤษภาคม 2026):</strong> เขียนใหม่มาตรา 1.3 จากข้อความ "ฟีเจอร์ในอนาคต" เป็นฟีเจอร์ปัจจุบันสำหรับฟังก์ชันการจับคู่ เพิ่ม "การแชร์ข้อมูลระหว่างคู่ผ่านฟังก์ชันการจับคู่" ในมาตรา 2</li>
+<li><strong>v3.2 (14 พฤษภาคม 2026):</strong> เตรียมเป็นเวอร์ชันเผยแพร่ครั้งแรกใน App Store</li>
+<li><strong>v3.1 (พฤษภาคม 2026):</strong> ชี้แจงการบันทึกวันเวลาที่ได้รับความยินยอม</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px;"><strong>จบเอกสาร</strong></p>
+
+</section>
+
+<script>
+  const supportedLangs = ['ja', 'en', 'ko', 'zh-TW', 'th'];
+
+  function setLang(lang) {
+    if (!supportedLangs.includes(lang)) lang = 'ja';
+
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+    const target = document.querySelector('.lang-section[data-lang="' + lang + '"]');
+    if (target) target.classList.add('active');
+
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    const btn = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
+    if (btn) btn.classList.add('active');
+
+    document.documentElement.lang = lang;
+
+    try {
+      history.replaceState(null, '', '#' + lang);
+    } catch (e) {
+      try { window.location.hash = lang; } catch (e2) {}
+    }
+  }
+
+  function detectInitialLang() {
+    const hash = window.location.hash.replace('#', '');
+    if (supportedLangs.includes(hash)) return hash;
+
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (browserLang.startsWith('ja')) return 'ja';
+    if (browserLang.startsWith('en')) return 'en';
+    if (browserLang.startsWith('ko')) return 'ko';
+    if (browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hant')) return 'zh-TW';
+    if (browserLang.startsWith('th')) return 'th';
+    return 'ja';
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+
+  setLang(detectInitialLang());
+</script>
+
+</body>
+</html>
