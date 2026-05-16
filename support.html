@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twoget — Support / ふたり家計 サポート</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Apple SD Gothic Neo", "PingFang TC", "Thonburi", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px; line-height: 1.7; color: #3a342b; background: #faf6f0; }
+  h1 { color: #c4937a; border-bottom: 2px solid #c4937a; padding-bottom: 8px; margin-top: 24px; }
+  h2 { color: #7a8db5; margin-top: 32px; }
+  h3 { color: #5a5147; margin-top: 24px; }
+  a { color: #c4937a; }
+  ul { padding-left: 20px; }
+  hr { margin-top: 48px; border: none; border-top: 1px solid #efe7dc; }
+  .contact-box { background: #fff; border: 1px solid #efe7dc; border-radius: 8px; padding: 16px 24px; margin: 24px 0; }
+  .footer { text-align: center; color: #888; font-size: 14px; margin-top: 24px; }
+
+  /* Language switcher */
+  .lang-switcher {
+    position: sticky;
+    top: 0;
+    background: #faf6f0;
+    padding: 12px 0;
+    margin: -24px -24px 0 -24px;
+    padding: 12px 24px;
+    border-bottom: 1px solid #efe7dc;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .lang-btn {
+    background: #fff;
+    border: 1px solid #c4937a;
+    color: #c4937a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .lang-btn:hover { background: #f5ede2; }
+  .lang-btn.active { background: #c4937a; color: #fff; }
+
+  /* Language sections */
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="lang-btn" data-lang="ja">日本語</button>
+  <button class="lang-btn" data-lang="en">English</button>
+  <button class="lang-btn" data-lang="ko">한국어</button>
+  <button class="lang-btn" data-lang="zh-TW">繁體中文</button>
+  <button class="lang-btn" data-lang="th">ไทย</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- 日本語 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="ja">
+
+<h1>ふたり家計 — サポート</h1>
+
+<p>このページは、カップル・夫婦・ルームメイト向けの優しい家計簿アプリ「ふたり家計」のサポート情報です。</p>
+
+<h2>お問い合わせ</h2>
+
+<div class="contact-box">
+  <p><strong>不具合報告・ご意見:</strong><br>
+  <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></p>
+  <p><strong>プライバシー・データに関するお問い合わせ:</strong><br>
+  <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></p>
+</div>
+
+<p>日本の小さな個人開発者が運営しています。目安として 7 営業日程度を心がけて回答するよう努めますが、繁忙期等に遅延する場合があります。</p>
+
+<h2>よくあるご質問</h2>
+
+<h3>料金はかかりますか?</h3>
+<p>すべての機能を 100% 無料でご利用いただけます。任意の「応援」項目はありますが、応援をされなくても全機能が制限なく使えます。</p>
+
+<h3>アカウント登録は必要ですか?</h3>
+<p>不要です。ふたり家計はゲストモードで起動し、オフラインで完全に動作します。クラウド同期やパートナーとのペアリングを使いたい場合のみアカウント登録が必要になります。</p>
+
+<h3>パートナーとのペアリングはどう動きますか?</h3>
+<p>片方が招待コードを発行し、もう片方がそのコードを入力します。承認されると、両方の端末で同じ家計データがリアルタイムに共有されます。どちらからでもいつでも解除できます。</p>
+
+<h3>データはどこに保存されますか?</h3>
+<p>初期状態ではすべてのデータが端末内のみに保存されます。クラウド同期を有効にすると、Firebase(Google)の東京サーバーに保存されます。データの販売・広告表示・追跡は一切行いません。</p>
+
+<h3>アカウントを削除するには?</h3>
+<p>設定 → クラウド同期 → ログイン → アカウントを削除。アカウント・データ・累積応援金額がサーバーから完全に削除されます。</p>
+
+<h3>ペアリング解除後のデータはどうなりますか?</h3>
+<p>解除後も、双方の端末に共有していた支出記録のコピーが残ります。相手の手元のコピーを削除することはできません。詳細は利用規約 §6 をご確認ください。</p>
+
+<h2>法的書類</h2>
+
+<ul>
+  <li><a href="privacy-ja.html">プライバシーポリシー</a></li>
+  <li><a href="terms-ja.html">利用規約</a>(準備中)</li>
+  <li><a href="tokushoho-ja.html">特定商取引法に基づく表記</a>(準備中)</li>
+</ul>
+
+<hr>
+<p class="footer">© 2026 Taira Sonoda. 日本の個人開発者が心を込めて作りました。</p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- English -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="en">
+
+<h1>Twoget — Support</h1>
+
+<p>This page provides support information for the Twoget app, a gentle budget tracker for couples, married pairs, and roommates.</p>
+
+<h2>Contact Us</h2>
+
+<div class="contact-box">
+  <p><strong>Bug reports & feedback:</strong><br>
+  <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></p>
+  <p><strong>Privacy / data requests:</strong><br>
+  <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></p>
+</div>
+
+<p>We are a small independent developer based in Japan. We aim to respond within 7 business days, though response times may be longer during busy periods.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is Twoget free?</h3>
+<p>Yes, all features are 100% free. Optional support tiers are available, but no feature is locked behind a paywall.</p>
+
+<h3>Do I need to create an account?</h3>
+<p>No. Twoget starts in guest mode and works fully offline. Creating an account is optional, and only needed if you want cloud sync or partner pairing.</p>
+
+<h3>How does pairing with a partner work?</h3>
+<p>One user generates an invitation code, and the other enters it. Once accepted, both phones share the same household ledger in real time. Either side can unpair at any time.</p>
+
+<h3>How is my data stored?</h3>
+<p>By default, all data stays on your device only. If you opt into cloud sync, data is stored on Firebase (Google) servers in Tokyo. We never sell your data, show ads, or track you.</p>
+
+<h3>How do I delete my account?</h3>
+<p>Open Settings → Cloud Sync → Sign in → Delete Account. This permanently removes your account, your data, and your accumulated support amount from our servers.</p>
+
+<h3>What happens to my data after I unpair?</h3>
+<p>Both you and your partner keep a full copy of the shared expense history. Neither side can delete the other's copy. See our Terms of Service §6 for details.</p>
+
+<h2>Legal</h2>
+
+<ul>
+  <li><a href="privacy-ja.html">Privacy Policy</a> (English version coming soon)</li>
+  <li>Terms of Service (English version coming soon)</li>
+</ul>
+
+<hr>
+<p class="footer">© 2026 Taira Sonoda. Made with care in Japan.</p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- 한국어 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="ko">
+
+<h1>Twoget — 고객 지원</h1>
+
+<p>이 페이지는 Twoget(둘의 가계부) 앱의 고객 지원 정보입니다. 함께 사는 커플, 부부, 룸메이트를 위한 부드러운 가계부 앱입니다.</p>
+
+<h2>문의처</h2>
+
+<div class="contact-box">
+  <p><strong>버그 리포트 및 피드백:</strong><br>
+  <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></p>
+  <p><strong>개인정보 / 데이터 관련 문의:</strong><br>
+  <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></p>
+</div>
+
+<p>일본의 작은 독립 개발자가 운영하고 있습니다. 일반적으로 7영업일 이내에 회신드리며, 바쁜 시기에는 답변이 지연될 수 있습니다.</p>
+
+<h2>자주 묻는 질문</h2>
+
+<h3>Twoget은 무료인가요?</h3>
+<p>네, 모든 기능을 100% 무료로 사용할 수 있습니다. 선택적인 후원 등급이 있지만, 어떤 기능도 결제 뒤에 잠겨 있지 않습니다.</p>
+
+<h3>계정을 만들어야 하나요?</h3>
+<p>아니요. Twoget은 게스트 모드로 시작되며 완전히 오프라인으로 작동합니다. 계정 생성은 선택 사항이며, 클라우드 동기화나 파트너 페어링을 원하실 때만 필요합니다.</p>
+
+<h3>파트너와의 페어링은 어떻게 작동하나요?</h3>
+<p>한 명이 초대 코드를 생성하면 다른 한 명이 코드를 입력합니다. 수락되면 두 기기가 실시간으로 같은 가계부를 공유합니다. 어느 쪽이든 언제든지 페어링을 해제할 수 있습니다.</p>
+
+<h3>제 데이터는 어떻게 보관되나요?</h3>
+<p>기본적으로 모든 데이터는 사용자의 기기에만 보관됩니다. 클라우드 동기화를 켜시면 데이터가 Firebase(Google) 도쿄 서버에 저장됩니다. 데이터를 판매하거나, 광고를 표시하거나, 사용자를 추적하지 않습니다.</p>
+
+<h3>계정을 어떻게 삭제하나요?</h3>
+<p>설정 → 클라우드 동기화 → 로그인 → 계정 삭제. 이 작업은 계정, 데이터, 누적 후원 금액을 서버에서 영구적으로 제거합니다.</p>
+
+<h3>페어링 해제 후 데이터는 어떻게 되나요?</h3>
+<p>사용자와 파트너 모두 공유했던 지출 기록의 완전한 복사본을 유지합니다. 어느 쪽도 상대방의 복사본을 삭제할 수 없습니다. 자세한 내용은 이용약관 §6을 참조해 주세요.</p>
+
+<h2>법적 정보</h2>
+
+<ul>
+  <li><a href="privacy-ja.html">개인정보 처리방침</a>(한국어 버전 준비 중)</li>
+  <li>이용약관(한국어 버전 준비 중)</li>
+</ul>
+
+<hr>
+<p class="footer">© 2026 Taira Sonoda. 일본에서 정성껏 만들었습니다.</p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- 繁體中文 -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="zh-TW">
+
+<h1>Twoget — 客戶支援</h1>
+
+<p>本頁面為 Twoget(兩人記帳)App 的客戶支援資訊。這是一款為情侶、夫妻與室友打造的溫和記帳 App。</p>
+
+<h2>聯絡我們</h2>
+
+<div class="contact-box">
+  <p><strong>Bug 回報與意見回饋:</strong><br>
+  <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></p>
+  <p><strong>隱私 / 資料相關問題:</strong><br>
+  <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></p>
+</div>
+
+<p>由一位來自日本的小型獨立開發者經營。我們會盡量在 7 個工作日內回覆。在繁忙時期可能需要更多時間,還請見諒。</p>
+
+<h2>常見問題</h2>
+
+<h3>Twoget 是免費的嗎?</h3>
+<p>是的,所有功能都 100% 免費。我們提供可選的支持選項,但沒有任何功能被付費牆鎖住。</p>
+
+<h3>需要建立帳號嗎?</h3>
+<p>不需要。Twoget 以訪客模式啟動,可以完全離線使用。建立帳號是可選的,僅在您想使用雲端同步或與另一半配對時才需要。</p>
+
+<h3>與另一半的配對如何運作?</h3>
+<p>其中一人產生邀請碼,另一人輸入該邀請碼。接受後,兩部裝置會即時共享同一本家計帳。任一方都可以隨時解除配對。</p>
+
+<h3>我的資料如何儲存?</h3>
+<p>預設情況下,所有資料只留在您的裝置上。如果您啟用雲端同步,資料會儲存在 Firebase(Google)的東京伺服器上。我們不會販售您的資料、不顯示廣告、不追蹤您。</p>
+
+<h3>如何刪除我的帳號?</h3>
+<p>請進入 設定 → 雲端同步 → 登入 → 刪除帳號。此操作會永久從我們的伺服器移除您的帳號、資料和累積支持金額。</p>
+
+<h3>解除配對後我的資料會怎樣?</h3>
+<p>您和另一半都會保留完整的共享支出紀錄副本。任一方都無法刪除對方的副本。詳情請參閱使用條款 §6。</p>
+
+<h2>法律資訊</h2>
+
+<ul>
+  <li><a href="privacy-ja.html">隱私政策</a>(繁體中文版即將推出)</li>
+  <li>使用條款(繁體中文版即將推出)</li>
+</ul>
+
+<hr>
+<p class="footer">© 2026 Taira Sonoda. 由日本獨立開發者用心製作。</p>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- ไทย -->
+<!-- ============================================================ -->
+<section class="lang-section" data-lang="th">
+
+<h1>Twoget — ฝ่ายสนับสนุน</h1>
+
+<p>หน้านี้ให้ข้อมูลการสนับสนุนสำหรับแอป Twoget (คู่บัญชี) แอปบัญชีรายจ่ายที่นุ่มนวลสำหรับคู่รัก คู่แต่งงาน และเพื่อนร่วมห้องที่ใช้ชีวิตร่วมกัน</p>
+
+<h2>ติดต่อเรา</h2>
+
+<div class="contact-box">
+  <p><strong>รายงานบั๊กและข้อเสนอแนะ:</strong><br>
+  <a href="mailto:yorimitiworks@gmail.com">yorimitiworks@gmail.com</a></p>
+  <p><strong>คำถามเกี่ยวกับความเป็นส่วนตัว / ข้อมูล:</strong><br>
+  <a href="mailto:taira815816@gmail.com">taira815816@gmail.com</a></p>
+</div>
+
+<p>เราเป็นนักพัฒนาอิสระรายเล็กในประเทศญี่ปุ่น โดยทั่วไปเราจะตอบกลับภายใน 7 วันทำการ ในช่วงเวลาที่งานหนาแน่นอาจใช้เวลานานขึ้น</p>
+
+<h2>คำถามที่พบบ่อย</h2>
+
+<h3>Twoget ใช้ฟรีหรือไม่?</h3>
+<p>ใช่ ทุกฟีเจอร์ใช้ฟรี 100% มีระดับการสนับสนุนแบบสมัครใจให้เลือก แต่ไม่มีฟีเจอร์ใดถูกล็อกไว้หลังกำแพงการจ่ายเงิน</p>
+
+<h3>จำเป็นต้องสร้างบัญชีหรือไม่?</h3>
+<p>ไม่จำเป็น Twoget เริ่มต้นในโหมดผู้เยี่ยมชมและทำงานแบบออฟไลน์ได้สมบูรณ์ การสร้างบัญชีเป็นทางเลือก และจำเป็นเฉพาะเมื่อคุณต้องการซิงค์คลาวด์หรือจับคู่กับคู่ของคุณ</p>
+
+<h3>การจับคู่กับคู่ของคุณทำงานอย่างไร?</h3>
+<p>คนหนึ่งสร้างรหัสคำเชิญ และอีกคนกรอกรหัสนั้น เมื่อยอมรับแล้ว ทั้งสองเครื่องจะแชร์บัญชีครัวเรือนเดียวกันแบบเรียลไทม์ ฝ่ายใดฝ่ายหนึ่งสามารถยกเลิกการจับคู่ได้ตลอดเวลา</p>
+
+<h3>ข้อมูลของฉันถูกเก็บอย่างไร?</h3>
+<p>โดยค่าเริ่มต้น ข้อมูลทั้งหมดจะอยู่ในเครื่องของคุณเท่านั้น หากคุณเปิดใช้ซิงค์คลาวด์ ข้อมูลจะถูกเก็บไว้บนเซิร์ฟเวอร์ Firebase (Google) ในโตเกียว เราไม่ขายข้อมูลของคุณ ไม่แสดงโฆษณา และไม่ติดตามคุณ</p>
+
+<h3>ฉันจะลบบัญชีอย่างไร?</h3>
+<p>เปิด ตั้งค่า → ซิงค์คลาวด์ → ลงชื่อเข้าใช้ → ลบบัญชี การดำเนินการนี้จะลบบัญชี ข้อมูล และยอดสนับสนุนสะสมของคุณออกจากเซิร์ฟเวอร์ของเราอย่างถาวร</p>
+
+<h3>หลังจากยกเลิกการจับคู่ ข้อมูลของฉันจะเป็นอย่างไร?</h3>
+<p>คุณและคู่ของคุณจะเก็บสำเนาบันทึกค่าใช้จ่ายที่แชร์ไว้อย่างสมบูรณ์ ฝ่ายใดฝ่ายหนึ่งไม่สามารถลบสำเนาของอีกฝ่ายได้ ดูรายละเอียดในข้อกำหนดการใช้งาน §6</p>
+
+<h2>ข้อมูลทางกฎหมาย</h2>
+
+<ul>
+  <li><a href="privacy-ja.html">นโยบายความเป็นส่วนตัว</a> (ฉบับภาษาไทยกำลังจะมา)</li>
+  <li>ข้อกำหนดการใช้งาน (ฉบับภาษาไทยกำลังจะมา)</li>
+</ul>
+
+<hr>
+<p class="footer">© 2026 Taira Sonoda. สร้างด้วยความใส่ใจในประเทศญี่ปุ่น</p>
+
+</section>
+
+<script>
+  // Supported languages
+  const supportedLangs = ['ja', 'en', 'ko', 'zh-TW', 'th'];
+
+  function setLang(lang) {
+    if (!supportedLangs.includes(lang)) lang = 'ja';
+
+    // Hide all sections
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+    // Show selected section
+    const target = document.querySelector('.lang-section[data-lang="' + lang + '"]');
+    if (target) target.classList.add('active');
+
+    // Update button states
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    const btn = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
+    if (btn) btn.classList.add('active');
+
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+
+    // Update URL hash (wrap in try/catch for sandboxed iframe environments)
+    try {
+      history.replaceState(null, '', '#' + lang);
+    } catch (e) {
+      // replaceState may be blocked in sandboxed iframes (e.g. Claude preview).
+      // Fall back to direct hash assignment, which is also harmless if it fails.
+      try { window.location.hash = lang; } catch (e2) { /* ignore */ }
+    }
+  }
+
+  // Determine initial language: hash > browser language > default Japanese
+  function detectInitialLang() {
+    const hash = window.location.hash.replace('#', '');
+    if (supportedLangs.includes(hash)) return hash;
+
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (browserLang.startsWith('ja')) return 'ja';
+    if (browserLang.startsWith('en')) return 'en';
+    if (browserLang.startsWith('ko')) return 'ko';
+    if (browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hant')) return 'zh-TW';
+    if (browserLang.startsWith('th')) return 'th';
+    return 'ja';
+  }
+
+  // Wire up language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+
+  // Initial display
+  setLang(detectInitialLang());
+</script>
+
+</body>
+</html>
