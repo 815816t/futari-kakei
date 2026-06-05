@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ふたり家計 / Twoget</title>
+<meta name="robots" content="noindex">
+<!--
+  招待リンク中継ページ(方式B = Custom URL Scheme + 中継ページ)
+  - URL 例: https://815816t.github.io/futari-kakei/i.html?code=8H2K9P
+  - 「アプリで開く」= futarikakei://pair?code=CODE を叩く(インストール済みなら一発でアプリへ)
+  - 未インストールの人は「App Storeで入手」→ インストール後にもう一度このリンクを開く
+  - App Store 公開後、STORE_URL を実 App ID(idXXXXXXXXXX)に差し替えること。
+-->
+<style>
+  :root{
+    --blue:#7a8db5; --blue-dark:#5f7299;
+    --terra:#c4937a; --terra-dark:#a9785f;
+    --bg:#f6f3ee; --bg-soft:#efe9e0; --card:#fffdf9;
+    --text:#3d3a35; --text-soft:#8a8378; --line:#e6ddd0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg); color:var(--text);
+    display:flex; align-items:center; justify-content:center;
+    padding:24px; padding-top:max(24px,env(safe-area-inset-top)); padding-bottom:max(24px,env(safe-area-inset-bottom));
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{
+    width:100%; max-width:380px; background:var(--card);
+    border:1px solid var(--line); border-radius:24px;
+    padding:32px 24px 28px; text-align:center;
+    box-shadow:0 12px 40px rgba(122,141,181,.12);
+  }
+  .mark{
+    width:72px;height:72px;margin:0 auto 18px;border-radius:18px;
+    background:var(--terra); display:flex;align-items:center;justify-content:center;
+  }
+  .mark svg{width:44px;height:44px}
+  h1{font-size:19px;font-weight:700;line-height:1.5;margin-bottom:8px}
+  .sub{font-size:14px;color:var(--text-soft);line-height:1.7;margin-bottom:22px}
+  .code-label{font-size:12px;color:var(--text-soft);margin-bottom:6px;letter-spacing:.04em}
+  .code{
+    font-family:"SF Mono",Monaco,monospace; font-size:30px; font-weight:700;
+    letter-spacing:8px; color:var(--terra-dark);
+    background:var(--bg-soft); border-radius:14px; padding:18px 12px; margin-bottom:22px;
+  }
+  .btn{
+    display:block;width:100%;border:none;border-radius:14px;
+    font-size:16px;font-weight:600;padding:16px;cursor:pointer;
+    text-decoration:none;margin-bottom:12px;transition:opacity .15s;
+  }
+  .btn:active{opacity:.8}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-secondary{background:transparent;color:var(--blue-dark);border:1.5px solid var(--blue)}
+  .btn-ghost{background:transparent;color:var(--text-soft);font-size:14px;font-weight:500;padding:10px}
+  .note{font-size:12px;color:var(--text-soft);line-height:1.7;margin-top:14px}
+  .toast{
+    position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);
+    background:var(--text);color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:all .25s;white-space:nowrap;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fffdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l9-8 9 8"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/>
+        <rect x="8.5" y="13" width="2.5" height="2.5" rx=".6" fill="#fffdf9" stroke="none"/>
+        <rect x="13" y="13" width="2.5" height="2.5" rx=".6" fill="#fffdf9" stroke="none"/>
+      </svg>
+    </div>
+
+    <h1 id="headline">パートナーから招待されています</h1>
+    <p class="sub" id="sub">下のボタンからアプリを開いて、ふたりの家計を共有しましょう。</p>
+
+    <div id="codeBlock">
+      <div class="code-label" id="codeLabel">招待コード</div>
+      <div class="code" id="codeText">------</div>
+    </div>
+
+    <a class="btn btn-primary" id="openBtn" href="#">アプリで開く</a>
+    <a class="btn btn-secondary" id="installBtn" href="#">App Storeで入手</a>
+    <button class="btn btn-ghost" id="copyBtn" type="button">コードをコピー</button>
+
+    <p class="note" id="note">アプリが未インストールの場合は、インストール後にもう一度このリンクを開いてください。</p>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+  var SCHEME = 'futarikakei';
+  var STORE_URL = 'https://apps.apple.com/app/id0000000000'; // ← 公開後に実 App ID へ
+
+  var I18N = {
+    ja:{ headline:'パートナーから招待されています', sub:'下のボタンからアプリを開いて、ふたりの家計を共有しましょう。',
+         codeLabel:'招待コード', open:'アプリで開く', install:'App Storeで入手', copy:'コードをコピー',
+         copied:'コピーしました', note:'アプリが未インストールの場合は、インストール後にもう一度このリンクを開いてください。',
+         noCode:'招待コードが見つかりません。お手数ですが、招待した方にもう一度リンクを送ってもらってください。' },
+    en:{ headline:"You've been invited by your partner", sub:'Open the app below to start sharing expenses together.',
+         codeLabel:'Invite code', open:'Open the app', install:'Get it on the App Store', copy:'Copy code',
+         copied:'Copied', note:"If the app isn't installed yet, install it and open this link again.",
+         noCode:'No invite code found. Please ask your partner to send the link again.' },
+    ko:{ headline:'파트너가 초대했어요', sub:'아래 버튼으로 앱을 열고 함께 지출을 관리해요.',
+         codeLabel:'초대 코드', open:'앱에서 열기', install:'App Store에서 받기', copy:'코드 복사',
+         copied:'복사했어요', note:'앱이 설치되어 있지 않다면, 설치 후 이 링크를 다시 열어 주세요.',
+         noCode:'초대 코드를 찾을 수 없어요. 파트너에게 링크를 다시 보내 달라고 해 주세요.' },
+    'zh-TW':{ headline:'你的伴侶邀請了你', sub:'點擊下方按鈕開啟 App，一起管理兩人的支出。',
+         codeLabel:'邀請碼', open:'用 App 開啟', install:'從 App Store 取得', copy:'複製邀請碼',
+         copied:'已複製', note:'如果尚未安裝 App，請安裝後再次開啟此連結。',
+         noCode:'找不到邀請碼，請麻煩邀請你的人重新傳送連結。' },
+    th:{ headline:'คุณได้รับเชิญจากคู่ของคุณ', sub:'เปิดแอปจากปุ่มด้านล่างเพื่อจัดการค่าใช้จ่ายด้วยกัน',
+         codeLabel:'รหัสคำเชิญ', open:'เปิดในแอป', install:'ดาวน์โหลดจาก App Store', copy:'คัดลอกรหัส',
+         copied:'คัดลอกแล้ว', note:'หากยังไม่ได้ติดตั้งแอป กรุณาติดตั้งแล้วเปิดลิงก์นี้อีกครั้ง',
+         noCode:'ไม่พบรหัสคำเชิญ กรุณาขอให้คู่ของคุณส่งลิงก์อีกครั้ง' }
+  };
+
+  function pickLang(){
+    var l = (navigator.language || 'en');
+    if (/^ja/i.test(l)) return 'ja';
+    if (/^ko/i.test(l)) return 'ko';
+    if (/^zh.*(TW|HK|Hant)/i.test(l) || /^zh-TW/i.test(l)) return 'zh-TW';
+    if (/^zh/i.test(l)) return 'zh-TW';
+    if (/^th/i.test(l)) return 'th';
+    return 'en';
+  }
+  var T = I18N[pickLang()] || I18N.en;
+
+  function $(id){ return document.getElementById(id); }
+  function getCode(){
+    var m = (location.search || '').match(/[?&]code=([A-Za-z0-9]+)/);
+    var c = m ? m[1] : '';
+    return c.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
+  }
+  function toast(msg){
+    var el = $('toast'); el.textContent = msg; el.classList.add('show');
+    setTimeout(function(){ el.classList.remove('show'); }, 1600);
+  }
+
+  // テキスト適用
+  $('headline').textContent = T.headline;
+  $('sub').textContent      = T.sub;
+  $('codeLabel').textContent= T.codeLabel;
+  $('openBtn').textContent  = T.open;
+  $('installBtn').textContent = T.install;
+  $('copyBtn').textContent  = T.copy;
+  $('note').textContent     = T.note;
+  document.documentElement.lang = pickLang();
+
+  var code = getCode();
+  var openBtn = $('openBtn');
+  var installBtn = $('installBtn');
+  installBtn.href = STORE_URL;
+
+  if (!code) {
+    // コードが無ければ案内だけ表示し、操作系は隠す
+    $('codeBlock').classList.add('hidden');
+    openBtn.classList.add('hidden');
+    $('copyBtn').classList.add('hidden');
+    $('sub').textContent = T.noCode;
+  } else {
+    $('codeText').textContent = code;
+    var deepLink = SCHEME + '://pair?code=' + encodeURIComponent(code);
+    openBtn.href = deepLink;
+    // 「アプリで開く」= スキームを叩く(インストール済みならアプリが前面に出る)
+    openBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      window.location.href = deepLink;
+    });
+    // フォールバック:コードをコピー(手入力したい人向け)
+    $('copyBtn').addEventListener('click', function(){
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(function(){ toast(T.copied); }).catch(function(){});
+      } else {
+        try {
+          var r = document.createRange(); r.selectNodeContents($('codeText'));
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+          toast(T.copied);
+        } catch(_){}
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
