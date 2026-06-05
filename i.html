@@ -84,11 +84,11 @@
       <div class="code" id="codeText">------</div>
     </div>
 
-    <a class="btn btn-primary" id="openBtn" href="#">アプリで開く</a>
-    <a class="btn btn-secondary" id="installBtn" href="#">App Storeで入手</a>
+    <a class="btn btn-primary" id="installBtn" href="#">インストールする(初めての方)</a>
+    <a class="btn btn-secondary" id="openBtn" href="#">アプリで開く(インストール済みの方)</a>
     <button class="btn btn-ghost" id="copyBtn" type="button">コードをコピー</button>
 
-    <p class="note" id="note">アプリが未インストールの場合は、インストール後にもう一度このリンクを開いてください。</p>
+    <p class="note" id="note">初めての方は上のボタンから入手、すでにお持ちの方は「アプリで開く」を選んでください。</p>
   </div>
 
   <div class="toast" id="toast"></div>
@@ -101,24 +101,24 @@
 
   var I18N = {
     ja:{ headline:'パートナーから招待されています', sub:'下のボタンからアプリを開いて、ふたりの家計を共有しましょう。',
-         codeLabel:'招待コード', open:'アプリで開く', install:'App Storeで入手', copy:'コードをコピー',
-         copied:'コピーしました', note:'アプリが未インストールの場合は、インストール後にもう一度このリンクを開いてください。',
+         codeLabel:'招待コード', open:'アプリで開く(インストール済みの方)', install:'インストールする(初めての方)', copy:'コードをコピー',
+         copied:'コピーしました', note:'初めての方は上のボタンから入手、すでにお持ちの方は「アプリで開く」を選んでください。',
          noCode:'招待コードが見つかりません。お手数ですが、招待した方にもう一度リンクを送ってもらってください。' },
     en:{ headline:"You've been invited by your partner", sub:'Open the app below to start sharing expenses together.',
-         codeLabel:'Invite code', open:'Open the app', install:'Get it on the App Store', copy:'Copy code',
-         copied:'Copied', note:"If the app isn't installed yet, install it and open this link again.",
+         codeLabel:'Invite code', open:'Open the app (already installed)', install:'Install the app (first time)', copy:'Copy code',
+         copied:'Copied', note:'First time? Tap install above. Already have it? Tap "Open the app".',
          noCode:'No invite code found. Please ask your partner to send the link again.' },
     ko:{ headline:'파트너가 초대했어요', sub:'아래 버튼으로 앱을 열고 함께 지출을 관리해요.',
-         codeLabel:'초대 코드', open:'앱에서 열기', install:'App Store에서 받기', copy:'코드 복사',
-         copied:'복사했어요', note:'앱이 설치되어 있지 않다면, 설치 후 이 링크를 다시 열어 주세요.',
+         codeLabel:'초대 코드', open:'앱에서 열기 (이미 설치한 분)', install:'앱 설치하기 (처음이신 분)', copy:'코드 복사',
+         copied:'복사했어요', note:'처음이라면 위에서 설치하고, 이미 있다면 "앱에서 열기"를 선택하세요.',
          noCode:'초대 코드를 찾을 수 없어요. 파트너에게 링크를 다시 보내 달라고 해 주세요.' },
     'zh-TW':{ headline:'你的伴侶邀請了你', sub:'點擊下方按鈕開啟 App，一起管理兩人的支出。',
-         codeLabel:'邀請碼', open:'用 App 開啟', install:'從 App Store 取得', copy:'複製邀請碼',
-         copied:'已複製', note:'如果尚未安裝 App，請安裝後再次開啟此連結。',
+         codeLabel:'邀請碼', open:'用 App 開啟（已安裝）', install:'安裝 App（第一次使用）', copy:'複製邀請碼',
+         copied:'已複製', note:'第一次使用請點上方安裝；已安裝請點「用 App 開啟」。',
          noCode:'找不到邀請碼，請麻煩邀請你的人重新傳送連結。' },
     th:{ headline:'คุณได้รับเชิญจากคู่ของคุณ', sub:'เปิดแอปจากปุ่มด้านล่างเพื่อจัดการค่าใช้จ่ายด้วยกัน',
-         codeLabel:'รหัสคำเชิญ', open:'เปิดในแอป', install:'ดาวน์โหลดจาก App Store', copy:'คัดลอกรหัส',
-         copied:'คัดลอกแล้ว', note:'หากยังไม่ได้ติดตั้งแอป กรุณาติดตั้งแล้วเปิดลิงก์นี้อีกครั้ง',
+         codeLabel:'รหัสคำเชิญ', open:'เปิดในแอป (ติดตั้งแล้ว)', install:'ติดตั้งแอป (ใช้ครั้งแรก)', copy:'คัดลอกรหัส',
+         copied:'คัดลอกแล้ว', note:'ใช้ครั้งแรกแตะติดตั้งด้านบน หากมีแอปแล้วแตะ "เปิดในแอป"',
          noCode:'ไม่พบรหัสคำเชิญ กรุณาขอให้คู่ของคุณส่งลิงก์อีกครั้ง' }
   };
 
@@ -169,7 +169,10 @@
     $('codeText').textContent = code;
     var deepLink = SCHEME + '://pair?code=' + encodeURIComponent(code);
     openBtn.href = deepLink;
-    // 「アプリで開く」= スキームを叩く(インストール済みならアプリが前面に出る)
+    // 設計方針:判定して出し分けない。両経路(インストール / アプリで開く)を最初から提示し、
+    //   ユーザーに自分の状況を選ばせる。これにより未入手判定の不確実さも「アドレスが無効」の
+    //   小細工も不要になる。
+    //   「アプリで開く」= スキーム直起動(インストール済みの人だけが押す前提)
     openBtn.addEventListener('click', function(e){
       e.preventDefault();
       window.location.href = deepLink;
